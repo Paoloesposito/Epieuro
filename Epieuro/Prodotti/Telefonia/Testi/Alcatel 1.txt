@@ -1,0 +1,115 @@
+Alcatel 1 - 49.99 -Viaggia leggero con Alcatel 1 un dispositivo compatto e un display Full View 18:9: goditi i tuoi contenuti multimediali preferiti su un display di ottimo livello con un rapporto schermo/scocca straordinario.
+
+Cattura i tuoi momenti migliori con la fotocamera social: Fotocamera posteriore da 5MP (interpolata a 8MP) e fotocamera frontale da 2MP (interpolata a 5MP). Poi condividi i tuoi scatti all’istante con il Social Mode.
+
+
+Specifiche
+Display
+
+Dimensioni schermo: 12,7 cm (5″)
+Forma dello schermo: Piatto
+Risoluzione del display: 960 x 480 Pixel
+Rapporto d’aspetto nativo: 18:9
+Tipologia touch screen: Capacitivo
+Bordi display arrotondati: NO
+Processore
+
+Famiglia processore: MediaTek Dimensity
+Modello del processore: MT6739
+Numero di core del processore: 4
+Frequenza del processore turbo massima: 1,28 GHz
+Archiviazione
+
+Capacità della RAM: 1 GB
+Capacità memoria interna: 16 GB
+Tipi schede di memoria: MicroSD (TransFlash)
+Memoria espandibile fino a: 32 GB
+Macchina fotografica
+
+Risoluzione fotocamera posteriore (numerico): 5 MP
+Risoluzione fotocamera posteriore: 1920 x 1080 Pixel
+Tipo di fotocamera anteriore: Fotocamera singola
+Risoluzione fotocamera frontale (numerico): 2 MP
+Risoluzione fotocamera frontale: 1280 x 720 Pixel
+Flash per fotocamera posteriore: Sì
+Tipologia flash: LED
+Risoluzione acquisizione video: 1920 x 1080 Pixel
+Frequenza massima dei fotogrammi: 30 fps
+Risoluzione a velocità di acquisizione: 1920×1080@30fps
+Modalità registrazione video: 720p, 1080p
+Tipo di fotocamera posteriore: Fotocamera singola
+Collegamento in rete
+
+Capacità della scheda SIM: SIM singola
+Generazione di reti mobili: 4G
+Tipologia SIM card: NanoSIM
+Standard 3G: HSPA+
+Standard 4G: LTE
+Wi-Fi: Sì
+Standard Wi-Fi: 802.11b, 802.11g, Wi-Fi 4 (802.11n)
+Bluetooth: Sì
+Versione Bluetooth: 4.2
+Connettività
+
+Porta USB: Sì
+Connettore USB: Micro-USB
+Versione USB: 2.0
+Connessione cuffia: 3,5 mm
+Messaggistica
+
+Short Message Service (SMS): Sì
+MMS (Multimedia Messaging Service):Sì
+E-mail: Sì
+Design
+
+Fattore di forma: Barra
+Colore del prodotto: Nero
+Nome del colore: Volcano Black
+Prestazione
+
+Adattatore grafico: PowerVR GE8100
+Telefono con vivavoce: Sì
+Comandi vocali: Sì
+Allarme con vibrazione: Sì
+Navigazione
+
+GPS (satellitare): Sì
+Localizzatore di posizione: Sì
+Multimediale
+
+Radio FM: Sì
+Altoparlanti: Mono
+Formati audio supportati: AAC, AAC+, AMR, APE, FLAC, MIDI, MP3, Vorbis, WAV
+Software
+
+Piattaforma: Android
+Sistema operativo incluso: Android 8.0
+Piattaforma App Store: Google Play
+Assistente virtuale: Google Assistant
+Batteria
+
+Capacità della batteria: 2000 mAh
+Autonomia in conversazione (3G): 11 h
+Tempo di conversazione (4G): 8 h
+Autonomia in standby (3G): 300 h
+Tempo di Stanby (4G): 210 h
+Sensori
+
+Sensore di prossimità: Sì
+Accelerometro: Sì
+Sensore luce ambientale: Sì
+Dimensioni e peso
+
+Larghezza: 65,7 mm
+Profondità: 9,8 mm
+Altezza: 137,6 mm
+Peso: 134 g
+Contenuto dell’imballo
+
+Guida rapida: Sì
+Scheda di garanzia: Sì
+Cavi inclusi: Micro-USB
+Perno di espulsione della scheda SIM: Sì
+Altre caratteristiche
+
+Touch screen: Sì

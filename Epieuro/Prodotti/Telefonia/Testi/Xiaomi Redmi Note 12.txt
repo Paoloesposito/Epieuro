@@ -1,0 +1,59 @@
+Le eccezionali capacità della fotocamera del Redmi Note 12 e le funzionalità di intrattenimento sono in grado di affrontare tutte le sfide della vita.
+
+color	
+Black, Blue, Green
+
+Caratteristiche tecniche
+
+Tipo di dispositivo: SMARTPHONE
+informazioni aggiuntive per il sistema operativo: Android
+Processore: Core processore: 8-Core; Descrizione processore: Snapdragon 685
+Velocità processore: 2.8 GHz
+Capacità di memoria: 128 GB
+Slot di espansione per schede di memoria: sì
+Formati di scheda memoria: Micro-SD
+Dimensione memoria RAM: 4 GB
+Gamma di frequenza (banda): Quadri Band
+Sensori: Riconoscimento facciale, Lettore impronte digitali
+Capacità massima scheda di memoria: 1000 GB
+SIM-card size_IT: Nano-SIM (4FF)
+Schermo
+
+Diagonale schermo (pollici): 6.67 pollici
+Diagonale schermo: – / 6.67 pollici
+Display: AMOLED
+Touchscreen: sì
+Fotocamera
+
+Risoluzione della fotocamera posteriore: 50 megapixel
+Risoluzione fotocamera frontale: 13 megapixel
+Riconoscimento facciale: sì
+Funzioni
+
+Sensore impronte: sì
+Modulo GPS integrato: sì
+Dual SIM: sì
+Dati + collegamenti
+
+Near Field Communication: sì
+Connettività: 4G (LTE)
+Bluetooth: sì
+versione Bluetooth: Bluetooth 5.0
+Collegamenti: Wi-Fi 2.4GHz | Wi-Fi 5GHz; Bluetooth 5.0; NFC., Type-C USB
+LAN wireless: sì
+Scocca
+
+Larghezza: 16.5 cm
+Altezza: 0.7 cm
+Profondità: 7.5 cm
+Peso: 0.183 kg
+Alimentatore
+
+Tipo di batteria: Li-Po
+Ricarica rapida: sì
+Ricarica senza cavo: No
+Capacità batteria: 5000 mAh
+Caratteristiche generali
+
+Dimensioni (L/A/P) / peso: 16.5 cm x 0.7 cm x 7.5 cm / 0.183 kg
+Caratteristiche speciali: Resistenza all’acqua e alla polvere: IP53; Operatore: No; Display IPS: Sì
