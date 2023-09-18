@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dettaglio.aspx.cs" Inherits="Epieuro.Dettaglio" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="stile-dettagli.css" rel="stylesheet" />
 </asp:Content>
@@ -13,9 +14,8 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center ">
                             <h5 class="card-title m-0">Prodotto</h5>
-                        <span class="prezzo ms-2">0,00$</span>
+                            <span class="prezzo ms-2">0,00$</span>
                         </div>
-                        
                         <p class="card-text">Descrizione lunga dell'articolo in vendita ma lunga eh non due righe in croce come le descrizioni che fanno certe persone di cui non voglio fare i nomi, ma chi ha orecchie per intendere intenda, mi raccomando</p>
                         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                         <asp:Button CssClass="btn btn-secondary" ID="Button1" runat="server" Text="Acquista" />
@@ -24,5 +24,4 @@
             </div>
         </div>
     </div>
-    
 </asp:Content>
