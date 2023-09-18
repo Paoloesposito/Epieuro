@@ -51,7 +51,7 @@ namespace Epieuro
 
         public static void getProdotto (int id, Prodotto varProdotto) 
         {
-            SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdContatto=@id", conn);
+            SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdProdotto=@id", conn);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataReader sqlDataReader;
             conn.Open();
