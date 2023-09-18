@@ -18,7 +18,7 @@ namespace Epieuro
             if (!IsPostBack) 
             {
                 int Id = Convert.ToInt32(Request.QueryString["idProdotto"]);
-
+                
                 Db.getProdotto(Id, selectedPrd);
 
 
