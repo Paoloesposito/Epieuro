@@ -20,7 +20,7 @@
                                         
                                             <div class="row row-cols-1 row-cols-sm-2 g-3">
                                                 <div class="col">
-                                                    <a href="#" class="btn btn-primary">Dettaglio</a>
+                                                    <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="btn btn-primary">Dettaglio</a>
                                                 </div>
                                                 <div class="col">
                                                     <asp:Button ID="AddCart" CssClass="btn btn-success" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
