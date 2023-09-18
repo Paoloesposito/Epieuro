@@ -122,6 +122,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Prodotti\Elettronica\HP 250 G9 %281%29.jpg" />
+    <Content Include="Prodotti\Elettronica\HP 250 G9 %282%29.jpg" />
+    <Content Include="Prodotti\Elettronica\HP 250 G9 %283%29.jpg" />
+    <Content Include="Prodotti\Elettronica\HP 250 G9 %284%29.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Pellicola Privacy %281%29.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Pellicola Privacy %282%29.jpg" />
