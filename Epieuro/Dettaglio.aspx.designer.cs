@@ -11,16 +11,16 @@ namespace Epieuro
 {
 
 
-    public partial class Default
+    public partial class Dettaglio
     {
 
         /// <summary>
-        /// Controllo prodotti.
+        /// Controllo Button1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater prodotti;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

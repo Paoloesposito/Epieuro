@@ -120,12 +120,10 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Dettaglio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Prodotti\Elettronica\HP 250 G9 %281%29.jpg" />
-    <Content Include="Prodotti\Elettronica\HP 250 G9 %282%29.jpg" />
-    <Content Include="Prodotti\Elettronica\HP 250 G9 %283%29.jpg" />
-    <Content Include="Prodotti\Elettronica\HP 250 G9 %284%29.jpg" />
+    <Content Include="Login.aspx" />
     <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Pellicola Privacy %281%29.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Pellicola Privacy %282%29.jpg" />
@@ -198,12 +196,16 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="stile-dettagli.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classi\Prodotto.cs" />
+    <Compile Include="Classi\User.cs" />
+    <Compile Include="Db.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,8 +213,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dettaglio.aspx.cs">
+      <DependentUpon>Dettaglio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dettaglio.aspx.designer.cs">
+      <DependentUpon>Dettaglio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
