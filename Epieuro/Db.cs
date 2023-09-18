@@ -49,5 +49,32 @@ namespace Epieuro
 
         }
 
+        public static void getProdotto (int id, Prodotto varProdotto) 
+        {
+            SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdContatto=@id", conn);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Prodotto prodotto = new Prodotto(
+                   Convert.ToInt32(sqlDataReader["IdProdotto"]),
+                   sqlDataReader["Nome"].ToString(),
+                   sqlDataReader["DescrizioneBreve"].ToString(),
+                   sqlDataReader["DescrizioneEstesa"].ToString(),
+                   Convert.ToInt32(sqlDataReader["Quantita"]),
+                   sqlDataReader["FotoPrincipale"].ToString(),
+                   sqlDataReader["FotoExtra"].ToString(),
+                   sqlDataReader["Specifiche"].ToString(),
+                   Convert.ToDouble(sqlDataReader["Prezzo"]),
+                   Convert.ToInt32(sqlDataReader["idBrand"]),
+                   Convert.ToInt32(sqlDataReader["idCategoria"])
+                   );
+                varProdotto=prodotto;
+            }
+            
+        }
+
     }
 }
