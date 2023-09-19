@@ -45,6 +45,60 @@ namespace Epieuro
             myrepeater.DataBind();
             conn.Close();
         }
+       
+        public static void getCategorie(Repeater myrepeater) 
+        {
+            SqlCommand cmd = new SqlCommand("select * from CATEGORIA", conn);
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            List<Categorie> listaCategorie = new List<Categorie>();
+            sqlDataReader = cmd.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                Categorie categoria = new Categorie (
+                   Convert.ToInt32(sqlDataReader["IdCategoria"]),
+                   sqlDataReader["Nome"].ToString()
+                );
+                listaCategorie.Add(categoria);
+            }
+            myrepeater.DataSource = listaCategorie;
+            myrepeater.DataBind();
+            conn.Close();
+
+        }
+
+        public static void getPrdCategoria (Repeater myrepeater, int IdCategoria) 
+        {
+            SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdCategoria=@IdCategoria", conn);
+            cmd.Parameters.AddWithValue("IdCategoria", IdCategoria);
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            List<Prodotto> listaProdotti = new List<Prodotto>();
+            sqlDataReader = cmd.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                Prodotto prodotto = new Prodotto(
+                   Convert.ToInt32(sqlDataReader["IdProdotto"]),
+                   sqlDataReader["Nome"].ToString(),
+                   sqlDataReader["DescrizioneBreve"].ToString(),
+                   sqlDataReader["DescrizioneEstesa"].ToString(),
+                   Convert.ToInt32(sqlDataReader["Quantita"]),
+                   sqlDataReader["FotoPrincipale"].ToString(),
+                   sqlDataReader["FotoExtra"].ToString(),
+                   sqlDataReader["Specifiche"].ToString(),
+                   Convert.ToDouble(sqlDataReader["Prezzo"]),
+                   Convert.ToInt32(sqlDataReader["idBrand"]),
+                   Convert.ToInt32(sqlDataReader["idCategoria"])
+                    );
+                listaProdotti.Add(prodotto);
+            }
+            myrepeater.DataSource = listaProdotti;
+            myrepeater.DataBind();
+            conn.Close();
+
+        }
 
         public static Prodotto getProdotto(int id)
         {
@@ -75,6 +129,7 @@ namespace Epieuro
             conn.Close();
             return MyPrd;   
         }
+        
         public static void getCarrello(GridView mygridView)
         {
             

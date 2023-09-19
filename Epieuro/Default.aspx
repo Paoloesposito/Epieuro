@@ -8,24 +8,16 @@
 
         <!-- Sezione delle etichette delle categorie -->
 <div class="row mb-4">
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text="Telefonia" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat2" CssClass="custom-btn w-100" runat="server" Text="Elettronica" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat3" CssClass="custom-btn w-100" runat="server" Text="Tv Audio e Video" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat4" CssClass="custom-btn w-100" runat="server" Text="Gaming" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat5" CssClass="custom-btn w-100" runat="server" Text="Piccoli Elettrodomestici" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat6" CssClass="custom-btn w-100" runat="server" Text="Grandi ELettrodomestici" />
-        </div>
+
+    <asp:Repeater ID="Categorie" runat="server" ItemType="Epieuro.Classi.Categorie">
+        <ItemTemplate>
+            <div class="col-sm-4 col-md-2">
+                <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text=<%#Item.Nome %> CommandArgument="<%#Item.IdCategoria %>" OnClick="btnCat1_Click" />
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+        
+        
     </div>
 
  <!-- Sezione dei prodotti -->
