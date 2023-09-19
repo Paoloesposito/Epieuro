@@ -48,8 +48,8 @@
     <div id="totaleTesto" runat="server" class="d-flex justify-content-end me-2">
         <asp:Label ID="totale" CssClass="fw-bold" runat="server" Text="Label"></asp:Label>
     </div>
-    <div class="d-flex" id="carrelloBoxVuoto" runat="server">
-        <img style="width: 500px;" src="ImgCarrello/emoticon-triste.jpg" />
-        <h1 id="carrelloVuoto" runat="server" class="fw-bold"></h1>
+    <div class="d-flex align-items-center mt-5" id="carrelloBoxVuoto" runat="server">
+        <img id="imgCarrelloVuoto" src="ImgCarrello/carrelloVuoto.png" />
+        <h1 id="carrelloVuoto" class="textCarrelloVuoto" runat="server"></h1>
     </div>
 </asp:Content>

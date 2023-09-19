@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Carrello-Stile.css" />
     <Content Include="Carrello.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -124,7 +125,7 @@
     <Content Include="Dettaglio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="ImgCarrello\emoticon-triste.jpg" />
+    <Content Include="ImgCarrello\carrelloVuoto.png" />
     <Content Include="Login.aspx" />
     <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\amazfit.jpg" />
