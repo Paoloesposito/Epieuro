@@ -13,7 +13,7 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <div class="d-flex align-items-center ">
-                            <h5 class="card-title m-0">Prodotto</h5>
+                            <h5 runat="server" class="card-title m-0">prodotto</h5>
                             <span class="prezzo ms-2">0,00$</span>
                         </div>
                         <p class="card-text">Descrizione lunga dell'articolo in vendita ma lunga eh non due righe in croce come le descrizioni che fanno certe persone di cui non voglio fare i nomi, ma chi ha orecchie per intendere intenda, mi raccomando</p>

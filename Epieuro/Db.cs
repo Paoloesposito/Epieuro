@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
@@ -38,27 +39,24 @@ namespace Epieuro
                    Convert.ToInt32(sqlDataReader["idCategoria"])
                     );
                 listaProdotti.Add(prodotto);
-
             }
-
             myrepeater.DataSource = listaProdotti;
             myrepeater.DataBind();
-
             conn.Close();
-
-
         }
 
-        public static void getProdotto (int id, Prodotto varProdotto) 
+        public static Prodotto getProdotto(int id)
         {
+            Prodotto MyPrd= new Prodotto();
             SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdProdotto=@id", conn);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataReader sqlDataReader;
             conn.Open();
             sqlDataReader = cmd.ExecuteReader();
+            
             while (sqlDataReader.Read())
             {
-                Prodotto prodotto = new Prodotto(
+                   Prodotto prd  = new Prodotto(
                    Convert.ToInt32(sqlDataReader["IdProdotto"]),
                    sqlDataReader["Nome"].ToString(),
                    sqlDataReader["DescrizioneBreve"].ToString(),
@@ -71,9 +69,10 @@ namespace Epieuro
                    Convert.ToInt32(sqlDataReader["idBrand"]),
                    Convert.ToInt32(sqlDataReader["idCategoria"])
                    );
-                varProdotto=prodotto;
+                MyPrd= prd;
             }
-            
+            conn.Close();
+            return MyPrd;   
         }
 
     }
