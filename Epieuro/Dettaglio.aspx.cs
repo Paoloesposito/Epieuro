@@ -12,20 +12,13 @@ namespace Epieuro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Prodotto selectedPrd = new Prodotto();
-            
-
-            if (!IsPostBack) 
+            Prodotto selectedPrd;
+            if (!IsPostBack)
             {
                 int Id = Convert.ToInt32(Request.QueryString["idProdotto"]);
-                
-                Db.getProdotto(Id, selectedPrd);
-
-
-
+                selectedPrd = Db.getProdotto(Id);
+          
             }
-
-
         }
     }
 }

@@ -13,13 +13,9 @@ namespace Epieuro
         {
             if (!IsPostBack)
             {
-            Db.getProdotti(prodotti); 
-
+                 Db.getProdotti(prodotti); 
             }
      
-
-
-
         }
 
         protected void AddCart_Click(object sender, EventArgs e)
