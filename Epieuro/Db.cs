@@ -74,6 +74,10 @@ namespace Epieuro
             conn.Close();
             return MyPrd;   
         }
+        public static void getCarrello(GridView mygridView)
+        {
+            sql
+        }
 
     }
 }

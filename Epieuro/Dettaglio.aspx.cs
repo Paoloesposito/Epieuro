@@ -19,7 +19,7 @@ namespace Epieuro
             {
                 int Id = Convert.ToInt32(Request.QueryString["idProdotto"]);
                 
-                Db.getProdotto(Id, selectedPrd);
+                //Db.getProdotto(Id, selectedPrd);
 
                 Quantita.Text = "1";
 
