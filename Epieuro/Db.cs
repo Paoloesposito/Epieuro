@@ -80,5 +80,41 @@ namespace Epieuro
             
         }
 
+        public static void AddUser(User user) 
+        {
+            try 
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                "INSERT INTO UTENTE VALUES (@Nome, @Cognome, @Email, @Password, @FotoProfilo, @IdRuolo)",conn);
+
+                cmd.Parameters.AddWithValue("Nome", user.Nome);
+                cmd.Parameters.AddWithValue("Cognome", user.Cognome);
+                cmd.Parameters.AddWithValue("Email", user.Email);
+                cmd.Parameters.AddWithValue("Password", user.Password);
+                cmd.Parameters.AddWithValue("FotoProfilo", user.FotoProfilo);
+                cmd.Parameters.AddWithValue("IdRuolo", user.Ruolo);
+
+                int inserimentoEffettuato = cmd.ExecuteNonQuery();
+
+                if(inserimentoEffettuato > 0)
+                {
+                    //codice per messaggio di successo
+                    // redirect to login page?
+                }
+            }
+            catch (Exception ex) 
+            { 
+            //codice per messaggio di errore
+            }
+            finally 
+            { 
+                conn.Close(); 
+            }
+
+        
+        }
+
+
     }
 }

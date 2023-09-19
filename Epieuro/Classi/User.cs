@@ -18,7 +18,7 @@ namespace Epieuro.Classi
         
         public User() { }
 
-        public User(string nome,string cognome, string mail, string password, string foto, int ruolo ) 
+        public User(string nome,string cognome, string mail, string password, string foto = "", int ruolo = 1) 
         { 
            Nome = nome;
             Cognome = cognome;
@@ -28,13 +28,6 @@ namespace Epieuro.Classi
             Ruolo = ruolo;       
         }
 
-        public User(string nome, string cognome, string mail, string password) 
-        {
-            Nome = nome;
-            Cognome = cognome;
-            Email = mail;
-            Password = password;
-
-        }
+        
     }
 }
