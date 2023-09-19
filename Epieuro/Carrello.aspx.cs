@@ -19,9 +19,17 @@ namespace Epieuro
                 addCart = Session["carrello"] as List<Prodotto>;
                 if(addCart != null)
                 {
+                    carrelloBoxVuoto.Visible = false;
                     carrelloGrid.DataSource = addCart;
                     carrelloGrid.DataBind();
+                    totaleTesto.Visible = true;
                     totale.Text = $"Totale: {CalcolaTotale()}";
+                }
+                if (addCart == null)
+                {
+                    carrelloBoxVuoto.Visible = true;
+                    carrelloVuoto.InnerHtml = $"Il carrello è vuoto è triste! <a href=\"Default.aspx\">Premi qui</a> per tornare nella pagina acquisti";
+                    totaleTesto.Visible = false;
                 }
             }
         }

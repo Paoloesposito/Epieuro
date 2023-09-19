@@ -124,6 +124,7 @@
     <Content Include="Dettaglio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ImgCarrello\emoticon-triste.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\amazfit.jpg" />

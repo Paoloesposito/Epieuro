@@ -24,6 +24,15 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.GridView carrelloGrid;
 
         /// <summary>
+        /// Controllo totaleTesto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totaleTesto;
+
+        /// <summary>
         /// Controllo totale.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,23 @@ namespace Epieuro
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label totale;
+
+        /// <summary>
+        /// Controllo carrelloBoxVuoto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloBoxVuoto;
+
+        /// <summary>
+        /// Controllo carrelloVuoto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloVuoto;
     }
 }
