@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="carrello" CssClass="table table-bordered" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
+    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
@@ -30,20 +30,26 @@
                     <strong>Quantità</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <%# Item.quantita %>
+                    <%# Item.quantitaAcquistata %>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
-         <Columns>
-     <asp:TemplateField>
-         <HeaderTemplate>
-             <strong>Prezzo</strong>
-         </HeaderTemplate>
-         <ItemTemplate>
-             <%# Item.Prezzo %>
-         </ItemTemplate>
-     </asp:TemplateField>
- </Columns>
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    <strong>Prezzo</strong>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <%# Item.Prezzo %>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
     </asp:GridView>
-
+    <div id="totaleTesto" runat="server" class="d-flex justify-content-end me-2">
+        <asp:Label ID="totale" CssClass="fw-bold" runat="server" Text="Label"></asp:Label>
+    </div>
+    <div class="d-flex" id="carrelloBoxVuoto" runat="server">
+        <img style="width: 500px;" src="ImgCarrello/emoticon-triste.jpg" />
+        <h1 id="carrelloVuoto" runat="server" class="fw-bold"></h1>
+    </div>
 </asp:Content>

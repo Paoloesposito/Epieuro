@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Epieuro.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Style%20Default.css" rel="stylesheet" />
 </asp:Content>
@@ -35,7 +36,7 @@
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                   <img src="Prodotti/Telefonia/Immagini/<%#Item.FotoPrincipale %>" class="img-fluid rounded-start"/>
+                                    <img src="Prodotti/Telefonia/Immagini/<%#Item.FotoPrincipale %>" class="img-fluid rounded-start" />
                                 </div>
                                 <div class="col-md-8 h-50">
                                     <div class="card-body">
