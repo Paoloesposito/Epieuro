@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 
+
 namespace Epieuro
 {
     public static class Db
@@ -74,10 +75,12 @@ namespace Epieuro
             conn.Close();
             return MyPrd;   
         }
-        public static void getCarrello(GridView mygridView)
-        {
-            sql
-        }
+        //public static void addCarrello(Prodotto prodotto)
+        //{
+        //    List<Prodotto> Carrello = new List<Prodotto>();
+        //    Carrello.Add(prodotto);
+            
+        //}
 
     }
 }

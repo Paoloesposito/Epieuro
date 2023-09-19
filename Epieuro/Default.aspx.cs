@@ -24,11 +24,19 @@ namespace Epieuro
             Button button = (sender as Button);
             int id = Convert.ToInt32(button.CommandArgument);
             Prodotto selPrd = Db.getProdotto(id);
-            List<Prodotto> carrello = new List<Prodotto>();
-            
-            carrello.Add(selPrd);
-            Session["carrello"] = carrello; 
+            List<Prodotto> carrello;
 
+            if (Session["carrello"] == null)
+            {
+                carrello = new List<Prodotto>();
+            }
+            else
+            {
+                carrello = (List<Prodotto>)Session["carrello"];
+            }
+            carrello.Add(selPrd);
+            Session["carrello"] = carrello;
+            
         }
     }
 }
