@@ -24,6 +24,7 @@ namespace Epieuro
             Button button = (sender as Button);
             int id = Convert.ToInt32(button.CommandArgument);
             Prodotto selPrd = Db.getProdotto(id);
+            selPrd.quantitaAcquistata = 1;
             List<Prodotto> carrello;
 
             if (Session["carrello"] == null)
@@ -36,7 +37,7 @@ namespace Epieuro
             }
             carrello.Add(selPrd);
             Session["carrello"] = carrello;
-            
+            Response.Redirect("Carrello.aspx");
         }
     }
 }

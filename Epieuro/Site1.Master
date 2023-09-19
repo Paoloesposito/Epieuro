@@ -24,8 +24,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            <a class="nav-link" href="#">Carrello</a>
+                            <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
+                            <a class="nav-link" href="Carrello.aspx">Carrello</a>
                             <a class="nav-link" href="#">Login</a>
                             <a class="nav-link disabled" aria-disabled="true">Tutte le categorie</a>
                         </div>
