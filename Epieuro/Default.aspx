@@ -1,8 +1,33 @@
 ﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Epieuro.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="Style%20Default.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
+
+        <!-- Sezione delle etichette delle categorie -->
+<div class="row mb-4">
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text="Telefonia" />
+        </div>
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat2" CssClass="custom-btn w-100" runat="server" Text="Elettronica" />
+        </div>
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat3" CssClass="custom-btn w-100" runat="server" Text="Tv Audio e Video" />
+        </div>
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat4" CssClass="custom-btn w-100" runat="server" Text="Gaming" />
+        </div>
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat5" CssClass="custom-btn w-100" runat="server" Text="Piccoli Elettrodomestici" />
+        </div>
+        <div class="col-sm-4 col-md-2">
+            <asp:Button ID="btnCat6" CssClass="custom-btn w-100" runat="server" Text="Grandi ELettrodomestici" />
+        </div>
+    </div>
+
+ <!-- Sezione dei prodotti -->
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <asp:Repeater ID="prodotti" runat="server" ItemType="Epieuro.Classi.Prodotto">
                 <ItemTemplate>
@@ -12,7 +37,7 @@
                                 <div class="col-md-4">
                                    <img src="Prodotti/Telefonia/Immagini/<%#Item.FotoPrincipale %>" class="img-fluid rounded-start"/>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 h-50">
                                     <div class="card-body">
                                         <h5 class="card-title"><%#Item.Nome %></h5>
                                         <p class="card-text"><%#Item.DescrizioneBreve %></p>
@@ -20,10 +45,10 @@
                                         
                                             <div class="row row-cols-1 row-cols-sm-2 g-3">
                                                 <div class="col">
-                                                    <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="btn btn-primary">Dettaglio</a>
+                                                    <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="custom-btn w-100">Dettaglio</a>
                                                 </div>
                                                 <div class="col">
-                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="btn btn-success" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
+                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="custom-btn w-100" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
                                                 </div>
                                             
                                         </div>
