@@ -76,7 +76,7 @@ namespace Epieuro
         }
         public static void getCarrello(GridView mygridView)
         {
-            sql
+            
         }
 
     }
