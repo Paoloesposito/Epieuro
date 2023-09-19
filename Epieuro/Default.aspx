@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Epieuro.Default" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Epieuro.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -23,7 +23,7 @@
                                                     <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="btn btn-primary">Dettaglio</a>
                                                 </div>
                                                 <div class="col">
-                                                    <asp:Button ID="AddCart" CssClass="btn btn-success" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
+                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="btn btn-success" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
                                                 </div>
                                             
                                         </div>

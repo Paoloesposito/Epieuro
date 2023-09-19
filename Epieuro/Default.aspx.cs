@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Epieuro.Classi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,6 +21,13 @@ namespace Epieuro
 
         protected void AddCart_Click(object sender, EventArgs e)
         {
+            Button button = (sender as Button);
+            int id = Convert.ToInt32(button.CommandArgument);
+            Prodotto selPrd = Db.getProdotto(id);
+            List<Prodotto> carrello = new List<Prodotto>();
+            
+            carrello.Add(selPrd);
+            Session["carrello"] = carrello; 
 
         }
     }
