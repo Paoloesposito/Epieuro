@@ -13,6 +13,7 @@ namespace Epieuro.Classi
         public string DescrizioneBreve { get; set; }
         public string DescrizioneEstesa { get; set; }
         public int quantita {  get; set; }
+        public int quantitaAcquistata { get; set; }
         public string FotoPrincipale { get; set; }
         public string FotoExtra {  get; set; }
         public string Specifiche { get; set; }

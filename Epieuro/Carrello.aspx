@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="carrello" CssClass="table table-bordered" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
+    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
@@ -30,7 +30,7 @@
                     <strong>Quantità</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <%# Item.quantita %>
+                    <%# Item.quantitaAcquistata %>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -45,5 +45,7 @@
      </asp:TemplateField>
  </Columns>
     </asp:GridView>
-
+    <div class="d-flex justify-content-end me-2">
+    <asp:Label ID="totale" CssClass="fw-bold" runat="server" Text="Label"></asp:Label>
+        </div>
 </asp:Content>
