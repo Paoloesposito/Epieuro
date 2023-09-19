@@ -23,8 +23,13 @@ namespace Epieuro
 
                 Quantita.Text = "1";
 
-            }
+                DescrizioneLunga.InnerText = selectedPrd.DescrizioneEstesa;
+                NomeProdotto.InnerText = selectedPrd.Nome;
+                PrezzoProdotto.InnerText = Convert.ToString(selectedPrd.Prezzo);
+                ImgPrd.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
 
+            }
+            
 
         }
 
