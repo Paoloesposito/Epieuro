@@ -21,11 +21,28 @@ namespace Epieuro
                 
                 Db.getProdotto(Id, selectedPrd);
 
-
+                Quantita.Text = "1";
 
             }
 
 
+        }
+
+        protected void ButtonPiu_Click(object sender, EventArgs e)
+        {
+            int quantitaAttuale = int.Parse(Quantita.Text);
+            quantitaAttuale++;
+            Quantita.Text = quantitaAttuale.ToString();
+        }
+
+        protected void ButtonMeno_Click(object sender, EventArgs e)
+        {
+            int quantitaAttuale = int.Parse(Quantita.Text);
+            if(quantitaAttuale > 1 ) 
+            {
+                quantitaAttuale--;
+                Quantita.Text = quantitaAttuale.ToString();
+            }
         }
     }
 }
