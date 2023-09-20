@@ -20,7 +20,7 @@
         <div>
 
             <!-- Navbar -->
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
                 <!-- Container wrapper -->
                 <div class="container">
                     <!-- Toggle button -->
