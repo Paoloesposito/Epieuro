@@ -16,7 +16,7 @@
                 <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text=<%#Item.Nome %> CommandArgument="<%#Item.IdCategoria %>" OnClick="btnCat1_Click" />
             </div>
         </ItemTemplate>
-    </asp:Repeater>
+    </asp:Repeater>                                                                                                                                                             
         
         
     </div>

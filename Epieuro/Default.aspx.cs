@@ -43,7 +43,9 @@ namespace Epieuro
 
         protected void btnCat1_Click(object sender, EventArgs e)
         {
-            Db.getCategorie(Categorie);
+            Button button = ( sender as Button );
+            int id = Convert.ToInt32(button.CommandArgument);
+            Db.getPrdCategoria(prodotti,id);
         }
     }
 }
