@@ -4,38 +4,111 @@
     <link href="stile-dettagli.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-4">
-        <div id="dettaglio" class="card mb-3" style="width: 100%">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <div style="width: 100%">
-                        <asp:Image" ID="ImgPrd" runat="server" />
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 id="NomeProdotto" style="font-size: 4rem !important;" runat="server" class="card-title m-0">prodotto</h5>
-                        <div class="d-flex align-items-center ">
-                            <span><b>Prezzo:</b></span>
-                            <span id="PrezzoProdotto" runat="server" class="prezzo ms-2">0,00$</span> <span></span>
-                        </div>
-                        <p id="DescrizioneLunga" runat="server" class="card-text">Descrizione lunga dell'articolo in vendita ma lunga eh non due righe in croce come le descrizioni che fanno certe persone di cui non voglio fare i nomi, ma chi ha orecchie per intendere intenda, mi raccomando</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <asp:Button CssClass="custom-btn me-3" ID="Button1" runat="server" Text="Acquista" />
-
-                    </div>
-                    <div class="d-flex ms-3 align-items-center">
-                        <asp:Label ID="Label1" runat="server" Text="Quantità" CssClass="me-2"></asp:Label>
-                        <asp:TextBox ID="Quantita" CssClass=" quantita form-control" Width="50px" runat="server"></asp:TextBox>
-                        <span>
-                            <asp:Button ID="ButtonPiu" CssClass="custom-btn2 fw-bold ms-2 me-2" runat="server" Text=" + " OnClick="ButtonPiu_Click" /></span>
-                        <span>
-                            <asp:Button ID="ButtonMeno" CssClass="custom-btn2 fw-bold" runat="server" Text=" - " OnClick="ButtonMeno_Click" /></span>
-                    </div>
-                    <div>
-                    </div>
-                </div>
+   <main class="mt-5 pt-4">
+    <div class="container mt-5">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                 
+                  <asp:Image ID="Image1" runat="server" CssClass="img-fluid"/>
             </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                <!--Content-->
+                <div class="p-4">
+                    <div class="mb-3">
+                        
+                            <span class="badge bg-dark me-1">Category 2</span>
+                       
+                            <span class="badge bg-info me-1">New</span>
+                        
+                            <span class="badge bg-danger me-1">Bestseller</span>
+                        
+                    </div>
+
+                    <p class="lead">
+                        <span id="PrezzoProdotto" runat="server"></span>
+                    </p>
+
+                    <p style="font-size: 20px;">
+                        <strong>Description</strong>
+                    </p>
+
+
+                    <p id="Descrizione" runat="server"></p>
+
+                    <div class="d-flex justify-content-left">
+                        <!-- Default input -->
+                        <div class="form-outline me-1" style="width: 100px;">
+                            <input type="number" value="1" class="form-control" />
+                        </div>
+                        
+                        
+                        
+                        
+                        <button class="btn btn-primary ms-1" type="submit" runat="server" id="addCart" onclick="addCart_Click">
+                            Add to cart
+                            <i class="fas fa-shopping-cart ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--Content-->
+            </div>
+            <!--Grid column-->
         </div>
+        <!--Grid row-->
+
+        <hr />
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-md-10 text-center">
+                <h4 class="my-4 h4">Additional information</h4>
+
+                <p runat="server" id="specifiche"></p>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="" />
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
     </div>
+</main>
+ 
 </asp:Content>
+
+
+
+                <%--<div class="d-flex ms-3 align-items-center">
+                    <asp:Label ID="Label1" runat="server" Text="Quantità" CssClass="me-2"></asp:Label>
+                    <asp:TextBox ID="Quantita" CssClass=" quantita form-control" Width="50px" runat="server"></asp:TextBox>
+                    <span>
+                        <asp:Button ID="ButtonPiu" CssClass="custom-btn2 fw-bold ms-2 me-2" runat="server" Text=" + " OnClick="ButtonPiu_Click" /></span>
+                    <span>
+                        <asp:Button ID="ButtonMeno" CssClass="custom-btn2 fw-bold" runat="server" Text=" - " OnClick="ButtonMeno_Click" /></span>
+                </div>--%>
+           

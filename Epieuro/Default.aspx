@@ -166,7 +166,7 @@
                             <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
                                 data-mdb-ripple-color="light">
                                 <img src="Prodotti/Telefonia/Immagini/<%# Item.FotoPrincipale%>"
-                                    class="w-100" />
+                                    class="w-100 hoverImg" />
                                 <a href="#!">
                                     <div class="mask">
                                         <div class="d-flex justify-content-start align-items-end h-100">
@@ -184,6 +184,11 @@
                                 </a>
                                 </a>
                                     <h6 class="mb-3 price"><%# Item.Prezzo %></h6>
+                            <div>
+                                <a href="Dettaglio.aspx?IdProdotto=<%#Item.IdProdotto %>">Dettaglio</a>
+                              
+                            </div>
+                            
                             </div>
                         </div>
                     </div>

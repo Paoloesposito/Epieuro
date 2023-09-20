@@ -15,13 +15,13 @@ namespace Epieuro
     {
 
         /// <summary>
-        /// Controllo NomeProdotto.
+        /// Controllo Image1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NomeProdotto;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// Controllo PrezzoProdotto.
@@ -33,57 +33,30 @@ namespace Epieuro
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl PrezzoProdotto;
 
         /// <summary>
-        /// Controllo DescrizioneLunga.
+        /// Controllo Descrizione.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescrizioneLunga;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Descrizione;
 
         /// <summary>
-        /// Controllo Button1.
+        /// Controllo addCart.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlButton addCart;
 
         /// <summary>
-        /// Controllo Label1.
+        /// Controllo specifiche.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// Controllo Quantita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantita;
-
-        /// <summary>
-        /// Controllo ButtonPiu.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPiu;
-
-        /// <summary>
-        /// Controllo ButtonMeno.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonMeno;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl specifiche;
     }
 }
