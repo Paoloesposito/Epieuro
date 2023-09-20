@@ -16,7 +16,7 @@
              <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
              <asp:TextBox ID="PasswordLogin" CssClass="form-control" runat="server"></asp:TextBox>
              <asp:RequiredFieldValidator ID="RequiredFieldValidatorPSWLogin" ControlToValidate="PasswordLogin" ForeColor="Red" runat="server" ErrorMessage="Campo Obbligatorio!"></asp:RequiredFieldValidator>
-             <asp:Button ID="Button1" runat="server" CssClass="btn btn-warning" Text="Login" />
+             <asp:Button ID="Button1" runat="server" CssClass="btn btn-warning" Text="Login" OnClick="Button1_Click" />
              <!-- Fine sezione Login password -->
          </div>
      </div>
