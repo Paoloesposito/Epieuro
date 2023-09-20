@@ -184,6 +184,11 @@
                                 </a>
                                 </a>
                                     <h6 class="mb-3 price"><%# Item.Prezzo %></h6>
+                            <div>
+                                <a href="Dettaglio.aspx?IdProdotto=<%#Item.IdProdotto %>">Dettaglio</a>
+                              
+                            </div>
+                            
                             </div>
                         </div>
                     </div>

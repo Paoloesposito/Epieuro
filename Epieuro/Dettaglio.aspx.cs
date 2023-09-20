@@ -21,33 +21,38 @@ namespace Epieuro
                 
                 selectedPrd = Db.getProdotto(Id);
 
-                Quantita.Text = "1";
+                //Quantita.Text = "1";
 
-                DescrizioneLunga.InnerText = selectedPrd.DescrizioneEstesa;
-                NomeProdotto.InnerText = selectedPrd.Nome;
-                PrezzoProdotto.InnerText = Convert.ToString(selectedPrd.Prezzo);
-                //ImgPrd.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
-
+                Descrizione.InnerText = selectedPrd.DescrizioneEstesa;
+                //NomeProdotto.InnerText = selectedPrd.Nome;
+                PrezzoProdotto.InnerText = $"€ {Convert.ToString(selectedPrd.Prezzo)}";
+                Image1.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
+                specifiche.InnerText = selectedPrd.Specifiche;
             }
             
 
         }
 
-        protected void ButtonPiu_Click(object sender, EventArgs e)
+        protected void addCart_Click(object sender, EventArgs e)
         {
-            int quantitaAttuale = int.Parse(Quantita.Text);
-            quantitaAttuale++;
-            Quantita.Text = quantitaAttuale.ToString();
+
         }
 
-        protected void ButtonMeno_Click(object sender, EventArgs e)
-        {
-            int quantitaAttuale = int.Parse(Quantita.Text);
-            if(quantitaAttuale > 1 ) 
-            {
-                quantitaAttuale--;
-                Quantita.Text = quantitaAttuale.ToString();
-            }
-        }
+        //protected void ButtonPiu_Click(object sender, EventArgs e)
+        //{
+        //    int quantitaAttuale = int.Parse(Quantita.Text);
+        //    quantitaAttuale++;
+        //    Quantita.Text = quantitaAttuale.ToString();
+        //}
+
+        //protected void ButtonMeno_Click(object sender, EventArgs e)
+        //{
+        //    int quantitaAttuale = int.Parse(Quantita.Text);
+        //    if(quantitaAttuale > 1 ) 
+        //    {
+        //        quantitaAttuale--;
+        //        Quantita.Text = quantitaAttuale.ToString();
+        //    }
+        //}
     }
 }
