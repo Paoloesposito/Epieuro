@@ -43,5 +43,11 @@ namespace Epieuro
             }
             return "0.00";
         }
+
+        protected void ButtonSvuotaCarrello_Click(object sender, EventArgs e)
+        {
+            Session.Remove("carrello");
+            Response.Redirect(Request.RawUrl);
+        }
     }
 }
