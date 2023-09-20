@@ -26,7 +26,7 @@ namespace Epieuro
                 DescrizioneLunga.InnerText = selectedPrd.DescrizioneEstesa;
                 NomeProdotto.InnerText = selectedPrd.Nome;
                 PrezzoProdotto.InnerText = Convert.ToString(selectedPrd.Prezzo);
-                ImgPrd.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
+                //ImgPrd.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
 
             }
             
