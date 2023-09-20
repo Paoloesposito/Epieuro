@@ -15,14 +15,17 @@ namespace Epieuro
         {
 
         }
-
+        static public bool isLoggedIn = false;
+        static public User utente = new User();
         protected void Button1_Click(object sender, EventArgs e)
         {
-            User utente = Db.GetUser(EmailLogin.Text);
+            utente = Db.GetUser(EmailLogin.Text);
             if (utente.Email == EmailLogin.Text && utente.Password == PasswordLogin.Text)
             {
                 FormsAuthentication.SetAuthCookie(EmailLogin.Text, false);
+                isLoggedIn = true;
                 Response.Redirect(FormsAuthentication.DefaultUrl);
+
             }
             else
             {
