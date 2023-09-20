@@ -21,16 +21,16 @@
                         </div>
                         <p id="DescrizioneLunga" runat="server" class="card-text">Descrizione lunga dell'articolo in vendita ma lunga eh non due righe in croce come le descrizioni che fanno certe persone di cui non voglio fare i nomi, ma chi ha orecchie per intendere intenda, mi raccomando</p>
                         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        <asp:Button CssClass="btn btn-success me-3" ID="Button1" runat="server" Text="Acquista" />
+                        <asp:Button CssClass="custom-btn me-3" ID="Button1" runat="server" Text="Acquista" />
 
                     </div>
                     <div class="d-flex ms-3 align-items-center">
                         <asp:Label ID="Label1" runat="server" Text="Quantità" CssClass="me-2"></asp:Label>
                         <asp:TextBox ID="Quantita" CssClass=" quantita form-control" Width="50px" runat="server"></asp:TextBox>
                         <span>
-                            <asp:Button ID="ButtonPiu" CssClass="btn btn-success ms-2 me-2" runat="server" Text=" + " OnClick="ButtonPiu_Click" /></span>
+                            <asp:Button ID="ButtonPiu" CssClass="custom-btn2 fw-bold ms-2 me-2" runat="server" Text=" + " OnClick="ButtonPiu_Click" /></span>
                         <span>
-                            <asp:Button ID="ButtonMeno" CssClass="btn btn-success" runat="server" Text=" - " OnClick="ButtonMeno_Click" /></span>
+                            <asp:Button ID="ButtonMeno" CssClass="custom-btn2 fw-bold" runat="server" Text=" - " OnClick="ButtonMeno_Click" /></span>
                     </div>
                     <div>
                     </div>
