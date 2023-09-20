@@ -2,30 +2,23 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Style%20Default.css" rel="stylesheet" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.cssn" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
 
         <!-- Sezione delle etichette delle categorie -->
 <div class="row mb-4">
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text="Telefonia" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat2" CssClass="custom-btn w-100" runat="server" Text="Elettronica" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat3" CssClass="custom-btn w-100" runat="server" Text="Tv Audio e Video" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat4" CssClass="custom-btn w-100" runat="server" Text="Gaming" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat5" CssClass="custom-btn w-100" runat="server" Text="Piccoli Elettrodomestici" />
-        </div>
-        <div class="col-sm-4 col-md-2">
-            <asp:Button ID="btnCat6" CssClass="custom-btn w-100" runat="server" Text="Grandi ELettrodomestici" />
-        </div>
+
+    <asp:Repeater ID="Categorie" runat="server" ItemType="Epieuro.Classi.Categorie">
+        <ItemTemplate>
+            <div class="col-sm-4 col-md-2">
+                <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text=<%#Item.Nome %> CommandArgument="<%#Item.IdCategoria %>" OnClick="btnCat1_Click" />
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+        
+        
     </div>
 
  <!-- Sezione dei prodotti -->
@@ -33,7 +26,7 @@
             <asp:Repeater ID="prodotti" runat="server" ItemType="Epieuro.Classi.Prodotto">
                 <ItemTemplate>
                     <div class="col">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div id="boxSCard" class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <img src="Prodotti/Telefonia/Immagini/<%#Item.FotoPrincipale %>" class="img-fluid rounded-start" />
@@ -49,7 +42,7 @@
                                                     <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="custom-btn w-100">Dettaglio</a>
                                                 </div>
                                                 <div class="col">
-                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="custom-btn w-100" runat="server" Text="Aggiungi Al Carello" OnClick="AddCart_Click" />
+                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="custom-btn w-100" runat="server" Text="Aggiungi Al Carrello" OnClick="AddCart_Click" />
                                                 </div>
                                             
                                         </div>
@@ -63,4 +56,7 @@
             </asp:Repeater>
         </div>
     </div>
+  <%--  <div>
+        <span><i class="fas fa-arrow-circle-up"></i></span>
+    </div>--%>
 </asp:Content>

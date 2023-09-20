@@ -9,6 +9,8 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="stile-dettagli.css" rel="stylesheet" />
+    <link href="Carrello-Stile.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.cssn" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -25,10 +27,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
-                            <a class="nav-link" href="carrello.aspx">Carrello</a>
-                            <a class="nav-link" href="login.aspx">Login</a>
-                            <a class="nav-link disabled" aria-disabled="true">Tutte le categorie</a>
+                            <a class="nav-link text-white fw-bold" aria-current="page" href="Default.aspx">Home</a>
+                            <a class="nav-link text-white fw-bold" href="carrello.aspx">Carrello</a>
+                            <a class="nav-link text-white fw-bold" href="login.aspx">Login</a>
+                            <a class="nav-link text-white fw-bold" aria-disabled="true">Tutte le categorie</a>
                         </div>
                     </div>
                 </div>
@@ -37,6 +39,42 @@
             <%-- Content --%>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <hr id="hrFooter" />
+            <div class="container boxFooter rounded-top">
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center">
+                        <div class="footer-container">
+                           <%-- <div class="footer-logo">
+                                <img src="..." alt="Logo EpiEuro">
+                            </div>--%>
+                            <div class="footer-info">
+                                <h3 class="textBlue">Contatti</h3>
+                                <p class="textFooter">Indirizzo: Via Mario, n.10, Roma</p>
+                                <p class="textFooter">Email: info@epieuro.com</p>
+                                <p class="textFooter">Telefono: +39 123 456 789</p>
+                                <p class="textFooter">Capitale Sociale Euro 7.125.589,50 i.v.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <div class="footer-social">
+                            <h3 class="textBlue">Seguici</h3>
+                            <ul>
+                                <li class="textFooter">Facebook</li>
+                                <li class="textFooter">Twitter</li>
+                                <li class="textFooter">Instagram</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="copyright d-flex justify-content-center">
+                        <p class="textFooter">Team 1: Lorenzo A. - Francesco L. - Paolo E. - Fabio G. - Sebastiano C.</p>
+                    </div>
+                    <div class="copyright d-flex justify-content-center">
+                        <p class="textBlue">&copy; 2023 EpiEuro. Tutti i diritti riservati.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>

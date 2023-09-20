@@ -28,7 +28,7 @@ namespace Epieuro
                 if (addCart == null)
                 {
                     carrelloBoxVuoto.Visible = true;
-                    carrelloVuoto.InnerHtml = $"Il carrello è vuoto è triste! <a href=\"Default.aspx\">Premi qui</a> per tornare nella pagina acquisti";
+                    carrelloVuoto.InnerHtml = $"OPS! Il tuo carrello è vuoto! <a id='linkCarrello' href=\"Default.aspx\">Premi qui</a> per tornare nella pagina acquisti";
                     totaleTesto.Visible = false;
                 }
             }

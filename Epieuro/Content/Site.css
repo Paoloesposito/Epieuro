@@ -28,3 +28,35 @@ textarea {
 #dettaglio{
     background-color: lightyellow;
 }
+.nav-link:hover {
+    background-color: #FF7B2C;
+    border-radius:10px;
+}
+.navbar {
+    background-color: #1D15B3;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    border-bottom: 1px solid #FF7B2C;
+    margin-bottom: 5px;
+}
+#hrFooter {
+    color: white;
+}
+.textFooter {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.textBlue {
+    color: #1D15B3;
+    font-weight: bold;
+    text-align: center;
+}
+.boxFooter {
+    background-color: #FF7B2C;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.79);
+}
+ul{
+    list-style-type: none;
+}

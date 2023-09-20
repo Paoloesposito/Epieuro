@@ -21,8 +21,7 @@ namespace Epieuro
             if (Foto.HasFile) 
             {
                 FotoName = Foto.FileName;
-                Foto.SaveAs(Server.MapPath($"Content/UserImg/{Foto.FileName}"));
-                                
+                Foto.SaveAs(Server.MapPath($"Content/UserImg/{Foto.FileName}"));                
             }
 
             User MyUser = new User(Nome.Text, Cognome.Text, Email.Text, Password.Text, FotoName);
