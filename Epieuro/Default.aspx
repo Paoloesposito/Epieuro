@@ -132,7 +132,6 @@
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
