@@ -33,13 +33,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Controllo TextBox1.
+        /// Controllo Nome.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Nome;
 
         /// <summary>
         /// Controllo RequiredFieldValidator1.
@@ -60,13 +60,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Controllo TextBox2.
+        /// Controllo Cognome.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Cognome;
 
         /// <summary>
         /// Controllo RequiredFieldValidator2.
@@ -87,13 +87,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Controllo TextBox3.
+        /// Controllo Email.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
         /// Controllo RequiredFieldValidator3.
@@ -114,13 +114,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Controllo TextBox4.
+        /// Controllo Password.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Password;
 
         /// <summary>
         /// Controllo RequiredFieldValidator4.
@@ -141,13 +141,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Controllo TextBox5.
+        /// Controllo ConfPass.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox ConfPass;
 
         /// <summary>
         /// Controllo RequiredFieldValidator5.
@@ -159,13 +159,13 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
 
         /// <summary>
-        /// Controllo FileUpload1.
+        /// Controllo Foto.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload Foto;
 
         /// <summary>
         /// Controllo DropDownList1.

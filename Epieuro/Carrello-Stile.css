@@ -1,0 +1,19 @@
+﻿body {
+    background-color: #1D15B3;
+}
+#imgCarrelloVuoto{
+    width:400px;
+}
+#linkCarrello {
+    color: #FF7B2C;
+}
+.textCarrelloVuoto {
+    color: white;
+    font-weight:bold;
+}
+#tabellaHeader{
+    color: #FF7B2C;
+}
+#ButtonSvuotaCarrello {
+    background-color: #FF7B2C;
+}

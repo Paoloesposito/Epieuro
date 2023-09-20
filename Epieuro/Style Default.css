@@ -1,0 +1,28 @@
+﻿body {
+    background-color: #1D15B3;
+}
+
+.custom-btn {
+    background-color: #FF7B2C;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-weight:bold; 
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+}
+    .custom-btn:hover {
+        color: #1D15B3;
+    }
+#boxSCard {
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.79);
+}
+#boxSCard:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}

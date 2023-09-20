@@ -19,22 +19,44 @@ textarea {
         padding: 0;
     }
 }
-nav.navbar{
-    background-color: darkblue;
-    
+.loginPage {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
 }
-.navbar-brand{
-    font-size: 2rem;
+#dettaglio{
+    background-color: lightyellow;
 }
-nav.navbar a{
-    color: yellow;
-    
+.nav-link:hover {
+    background-color: #FF7B2C;
+    border-radius:10px;
 }
-nav .nav-link{
-    color: white !important;
+.navbar {
+    background-color: #1D15B3;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    border-bottom: 1px solid #FF7B2C;
+    margin-bottom: 5px;
 }
-.bold {
-    font-weight: 500 !important;
-    font-style: italic;
-    text-decoration:underline;
+#hrFooter {
+    color: white;
+}
+.textFooter {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.textBlue {
+    color: #1D15B3;
+    font-weight: bold;
+    text-align: center;
+}
+.boxFooter {
+    background-color: #FF7B2C;
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.79);
+}
+ul{
+    list-style-type: none;
 }

@@ -1,0 +1,17 @@
+﻿.card-title{
+    color: darkred;
+    
+}
+#NomeProdotto {
+    
+}
+.prezzo{
+    font-size: 2rem;
+    color: orangered;
+}
+#dettaglio{
+    height: 80vh;
+}
+.quantita{
+    width: 3rem;
+}
