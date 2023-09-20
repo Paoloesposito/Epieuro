@@ -44,6 +44,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.hoverImg:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+
 .footer-cta {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
 }
