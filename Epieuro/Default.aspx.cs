@@ -38,7 +38,7 @@ namespace Epieuro
             }
             carrello.Add(selPrd);
             Session["carrello"] = carrello;
-            Response.Redirect("Carrello.aspx");
+            Response.Redirect("UserAuth/Carrello.aspx");
         }
 
         protected void btnCat1_Click(object sender, EventArgs e)

@@ -27,10 +27,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link text-white fw-bold" aria-current="page" href="Default.aspx">Home</a>
-                            <a class="nav-link text-white fw-bold" href="carrello.aspx">Carrello</a>
+                            <a class="nav-link text-white fw-bold" aria-current="page" href="/Default.aspx">Home</a>
+                            <a class="nav-link text-white fw-bold" href="UserAuth/carrello.aspx">Carrello</a>
                             <a class="nav-link text-white fw-bold" href="login.aspx">Login</a>
                             <a class="nav-link text-white fw-bold" aria-disabled="true">Tutte le categorie</a>
+                            <asp:LinkButton ID="LogoutButton1" CssClass="nav-link text-white fw-bold" runat="server" OnClick="LogoutButton1_Click">logout</asp:LinkButton>
                         </div>
                     </div>
                 </div>
