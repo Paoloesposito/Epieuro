@@ -68,7 +68,7 @@
                     <!-- Right elements -->
                     <div class="d-flex align-items-center">
                         <!-- Icon -->
-    <asp:LinkButton ID="LogoutButton1" CssClass="nav-link text-white fw-bold" runat="server" OnClick="LogoutButton1_Click">logout</asp:LinkButton>
+                        <asp:LinkButton ID="LogoutButton1" CssClass="nav-link text-white fw-bold" runat="server" OnClick="LogoutButton1_Click">logout</asp:LinkButton>
                         <a class="nav-link me-3" href="#">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="badge rounded-pill badge-notification bg-danger">1</span>
