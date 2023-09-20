@@ -9,7 +9,7 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <div style="width: 100%">
-                        <asp:Image style="max-width: 100%" ID="ImgPrd" runat="server" />
+                        <asp:Image Style="max-width: 100%" ID="ImgPrd" runat="server" />
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -22,7 +22,6 @@
                         <p id="DescrizioneLunga" runat="server" class="card-text">Descrizione lunga dell'articolo in vendita ma lunga eh non due righe in croce come le descrizioni che fanno certe persone di cui non voglio fare i nomi, ma chi ha orecchie per intendere intenda, mi raccomando</p>
                         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                         <asp:Button CssClass="btn btn-success me-3" ID="Button1" runat="server" Text="Acquista" />
-
                     </div>
                     <div class="d-flex ms-3 align-items-center">
                         <asp:Label ID="Label1" runat="server" Text="Quantità" CssClass="me-2"></asp:Label>

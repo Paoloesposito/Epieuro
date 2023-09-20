@@ -11,9 +11,9 @@
     color: white;
     font-weight:bold;
 }
-#tabellaHeader{
+.tabellaHeader{
     color: #FF7B2C;
 }
-#ButtonSvuotaCarrello {
+.buttonDelete {
     background-color: #FF7B2C;
 }
