@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.UI.WebControls;
 
@@ -170,6 +172,48 @@ namespace Epieuro
         
         }
 
+        public static User GetUser(string email)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"select * from UTENTE where email = @email", conn);
+                cmd.Parameters.AddWithValue ("email", email);
+                SqlDataReader sqldatareader;
+                conn.Open();
+                sqldatareader = cmd.ExecuteReader();
+               
+                //string nome = "";
+                //string cognome = "";
+                
+                
+                User myUser= new User();
+                while(sqldatareader.Read())
+                {
+                    User user = new User(
+                    sqldatareader["Nome"].ToString(),
+                    sqldatareader["Cognome"].ToString(),
+                    sqldatareader["Email"].ToString(),
+                    sqldatareader["Password"].ToString(),
+                    sqldatareader["FotoProfilo"].ToString(),
+                    Convert.ToInt32(sqldatareader["IdRuolo"])
+                    
+                    );
+                    user.IdUser = Convert.ToInt32(sqldatareader["idUser"]);
+
+                    myUser = user;
+                }
+                return myUser;
+            }
+            catch 
+            { 
+                User failedUser = new User();
+                return failedUser;
+            }
+            
+                
+            
+            finally { conn.Close(); }
+        }
 
     }
 }

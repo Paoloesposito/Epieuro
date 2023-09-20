@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #1D15B3;
+   
 }
 
 .custom-btn {
@@ -36,10 +36,31 @@
     .custom-btn:hover {
         color: #1D15B3;
     }
-.boxSCard {
-    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.79);
+.carousel-item {
+    height: 50vh;
 }
-.boxSCard:hover{
-    transform: scale(1.1);
-    transition: .4s;
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footer-cta {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.price {
+    color: #263238;
+    font-size: 24px;
+}
+
+.card-title {
+    color: #263238;
+}
+
+.sale {
+    color: #E53935;
+}
+
+.sale-badge {
+    background-color: #E53935;
 }

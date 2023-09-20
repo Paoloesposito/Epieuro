@@ -9,7 +9,7 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <div style="width: 100%">
-                        <asp:Image style="max-width: 100%" ID="ImgPrd" runat="server" />
+                        <asp:Image" ID="ImgPrd" runat="server" />
                     </div>
                 </div>
                 <div class="col-md-8">

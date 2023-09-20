@@ -15,15 +15,6 @@ namespace Epieuro
     {
 
         /// <summary>
-        /// Controllo ImgPrd.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgPrd;
-
-        /// <summary>
         /// Controllo NomeProdotto.
         /// </summary>
         /// <remarks>
