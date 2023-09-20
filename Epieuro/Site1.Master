@@ -10,7 +10,6 @@
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="stile-dettagli.css" rel="stylesheet" />
     <link href="Carrello-Stile.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.cssn" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

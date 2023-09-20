@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="Epieuro.Carrello" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="Epieuro.Carrello" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
+    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered bg-light" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
-                    <strong>Prodotto</strong>
+                    <strong id="tabellaHeader">Prodotto</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <%# Item.Nome %>
@@ -17,7 +17,7 @@
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
-                    <strong>Descrizione Breve</strong>
+                    <strong id="tabellaHeader">Descrizione Breve</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <%# Item.DescrizioneBreve %>
@@ -27,7 +27,7 @@
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
-                    <strong>Quantità</strong>
+                    <strong id="tabellaHeader">Quantità</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <%# Item.quantitaAcquistata %>
@@ -37,16 +37,20 @@
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
-                    <strong>Prezzo</strong>
+                    <strong id="tabellaHeader">Prezzo</strong>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <%# Item.Prezzo %>
+                    <div>
+                        <asp:Button ID="Elimina" runat="server" CssClass="btn btn-outline-danger" Text="Button" CommandArgument="<%# Item.IdProdotto %>" OnClick="Elimina_Click" />
+                    </div>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <div id="totaleTesto" runat="server" class="d-flex justify-content-end me-2">
-        <asp:Label ID="totale" CssClass="fw-bold" runat="server" Text="Label"></asp:Label>
+    <div id="totaleTesto" runat="server" class="d-flex justify-content-between me-2">
+        <asp:Button ID="ButtonSvuotaCarrello" CssClass="custom-btn" runat="server" Text="Svuota Carrello" OnClick="ButtonSvuotaCarrello_Click" />
+        <asp:Label ID="totale" CssClass="fw-bold text-white" runat="server" Text="Label"></asp:Label>
     </div>
     <div class="d-flex align-items-center mt-5" id="carrelloBoxVuoto" runat="server">
         <img id="imgCarrelloVuoto" src="ImgCarrello/carrelloVuoto.png" />

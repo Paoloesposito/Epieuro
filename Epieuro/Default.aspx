@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Style%20Default.css" rel="stylesheet" />
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.cssn" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -35,14 +34,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><%#Item.Nome %></h5>
                                         <p class="card-text"><%#Item.DescrizioneBreve %></p>
-                                        <p class="card-text"><small class="text-body-secondary">Prezzo: € <%# Item.Prezzo %></small></p>
+                                        <p class="card-text "><small class="text-body-secondary fw-bold">Prezzo: € <%# Item.Prezzo %></small></p>
                                         
                                             <div class="row row-cols-1 row-cols-sm-2 g-3">
                                                 <div class="col">
-                                                    <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="custom-btn w-100">Dettaglio</a>
+                                                    <a href="Dettaglio.aspx?idProdotto=<%#Item.IdProdotto %>" class="custom-btn2 w-100">Dettaglio</a>
                                                 </div>
                                                 <div class="col">
-                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="custom-btn w-100" runat="server" Text="Aggiungi Al Carrello" OnClick="AddCart_Click" />
+                                                    <asp:Button ID="AddCart" CommandArgument="<%#Item.IdProdotto %>" CssClass="custom-btn w-100" runat="server" Text="Add Cart" OnClick="AddCart_Click" />
                                                 </div>
                                             
                                         </div>
