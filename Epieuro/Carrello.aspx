@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="Epieuro.Carrello" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="Epieuro.Carrello" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered text-white fw-bold" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
+    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered bg-light" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
         <Columns>
             <asp:TemplateField>
                 <HeaderTemplate>
@@ -41,11 +41,14 @@
                 </HeaderTemplate>
                 <ItemTemplate>
                     <%# Item.Prezzo %>
+                    <div>
+                        <asp:Button ID="Elimina" runat="server" CssClass="btn btn-outline-danger" Text="Button" CommandArgument="<%# Item.IdProdotto %>" OnClick="Elimina_Click" />
+                    </div>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <div id="totaleTesto" runat="server" class="d-flex justify-content-between me-2" >
+    <div id="totaleTesto" runat="server" class="d-flex justify-content-between me-2">
         <asp:Button ID="ButtonSvuotaCarrello" CssClass="custom-btn" runat="server" Text="Svuota Carrello" OnClick="ButtonSvuotaCarrello_Click" />
         <asp:Label ID="totale" CssClass="fw-bold text-white" runat="server" Text="Label"></asp:Label>
     </div>
