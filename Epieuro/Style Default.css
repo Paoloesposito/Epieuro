@@ -19,10 +19,10 @@
     .custom-btn:hover {
         color: #1D15B3;
     }
-#boxSCard {
+.boxSCard {
     box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.79);
 }
-#boxSCard:hover{
+.boxSCard:hover{
     transform: scale(1.1);
     transition: .4s;
 }

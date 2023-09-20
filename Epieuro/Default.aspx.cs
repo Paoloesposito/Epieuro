@@ -10,12 +10,15 @@ namespace Epieuro
 {
     public partial class Default : System.Web.UI.Page
     {
+        bool isFilter;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                  Db.getProdotti(prodotti);
                  Db.getCategorie(Categorie);
+                isFilter = false;
             }
      
         }
@@ -45,7 +48,18 @@ namespace Epieuro
         {
             Button button = ( sender as Button );
             int id = Convert.ToInt32(button.CommandArgument);
+            
+            if (!isFilter) 
+            { 
             Db.getPrdCategoria(prodotti,id);
+            isFilter = true;
+            }
+            else 
+            { 
+            Db.getProdotti(prodotti); isFilter = false;
+            
+            }
+            
         }
     }
 }

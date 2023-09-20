@@ -25,7 +25,7 @@
             <asp:Repeater ID="prodotti" runat="server" ItemType="Epieuro.Classi.Prodotto">
                 <ItemTemplate>
                     <div class="col">
-                        <div id="boxSCard" class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 boxSCard" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <img src="Prodotti/Telefonia/Immagini/<%#Item.FotoPrincipale %>" class="img-fluid rounded-start" />
