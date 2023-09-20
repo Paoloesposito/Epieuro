@@ -10,6 +10,8 @@
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="stile-dettagli.css" rel="stylesheet" />
     <link href="Carrello-Stile.css" rel="stylesheet" />
+    <link href="Style%20Default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -17,65 +19,157 @@
     <form id="form1" runat="server">
         <div>
 
-            <%-- Navbar --%>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="Default.aspx"><span class="bold">E</span>pi<span class="bold">E</span>uro</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
-                        <span class="navbar-toggler-icon"></span>
+            <!-- Navbar -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+                <!-- Container wrapper -->
+                <div class="container">
+                    <!-- Toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent1"
+                        aria-controls="navbarSupportedContent1"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link text-white fw-bold" aria-current="page" href="Default.aspx">Home</a>
-                            <a class="nav-link text-white fw-bold" href="carrello.aspx">Carrello</a>
-                            <a class="nav-link text-white fw-bold" href="login.aspx">Login</a>
-                            <a class="nav-link text-white fw-bold" aria-disabled="true">Tutte le categorie</a>
-                        </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-sm-0" href="https://mdbootstrap.com/">
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                                height="20"
+                                alt="MDB Logo"
+                                loading="lazy" />
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link " href="https://mdbootstrap.com/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/">About MDB</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/getting-started/installation/">Free download</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
                     </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Icon -->
+                        <a class="nav-link me-3" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+
+                        <a class="nav-link me-3" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="nav-link me-3" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="border rounded px-2 nav-link"
+                            target="_blank">
+                            <i class="fab fa-github me-2"></i>MDB GitHub
+                        </a>
+                    </div>
+                    <!-- Right elements -->
+
                 </div>
+                <!-- Container wrapper -->
             </nav>
+            <!-- Navbar -->
 
             <%-- Content --%>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <hr id="hrFooter" />
-            <div class="container boxFooter rounded-top">
-                <div class="row">
-                    <div class="col-6 d-flex justify-content-center">
-                        <div class="footer-container">
-                           <%-- <div class="footer-logo">
-                                <img src="..." alt="Logo EpiEuro">
-                            </div>--%>
-                            <div class="footer-info">
-                                <h3 class="textBlue">Contatti</h3>
-                                <p class="textFooter">Indirizzo: Via Mario, n.10, Roma</p>
-                                <p class="textFooter">Email: info@epieuro.com</p>
-                                <p class="textFooter">Telefono: +39 123 456 789</p>
-                                <p class="textFooter">Capitale Sociale Euro 7.125.589,50 i.v.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 d-flex justify-content-center">
-                        <div class="footer-social">
-                            <h3 class="textBlue">Seguici</h3>
-                            <ul>
-                                <li class="textFooter">Facebook</li>
-                                <li class="textFooter">Twitter</li>
-                                <li class="textFooter">Instagram</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!--Footer-->
+            <footer class="text-center text-white mt-4" style="background-color: #607D8B">
 
-                    <div class="copyright d-flex justify-content-center">
-                        <p class="textFooter">Team 1: Lorenzo A. - Francesco L. - Paolo E. - Fabio G. - Sebastiano C.</p>
-                    </div>
-                    <div class="copyright d-flex justify-content-center">
-                        <p class="textBlue">&copy; 2023 EpiEuro. Tutti i diritti riservati.</p>
-                    </div>
+                <!--Call to action-->
+                <div class="pt-4 pb-2">
+                    <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
+    <i class="fas fa-download ms-2"></i>
+                    </a>
+                    <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start free tutorial
+    <i class="fas fa-graduation-cap ms-2"></i>
+                    </a>
                 </div>
-            </div>
+                <!--/.Call to action-->
+
+                <hr class="text-dark">
+
+                <div class="container">
+                    <!-- Section: Social media -->
+                    <section class="mb-3">
+
+                        <!-- Facebook -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                        <!-- YouTube -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-youtube"></i></a>
+                        <!-- Github -->
+                        <a
+                            class="btn-link btn-floating btn-lg text-white"
+                            href="#!"
+                            role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                    </section>
+                    <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); text-color: #E0E0E0">
+                    © 2022 Copyright:
+                    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!--Footer-->
         </div>
     </form>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>

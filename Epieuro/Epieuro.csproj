@@ -127,6 +127,8 @@
     <Content Include="Global.asax" />
     <Content Include="ImgCarrello\carrelloVuoto.png" />
     <Content Include="Login.aspx" />
+    <Content Include="PaginaDefaultProva.aspx" />
+    <Content Include="PaginaProva_Stile.css" />
     <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\amazfit.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\bellissima-creativity-b9-400.jpg" />
@@ -267,6 +269,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaDefaultProva.aspx.cs">
+      <DependentUpon>PaginaDefaultProva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaDefaultProva.aspx.designer.cs">
+      <DependentUpon>PaginaDefaultProva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

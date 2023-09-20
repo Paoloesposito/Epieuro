@@ -15,7 +15,7 @@ namespace Epieuro
             if (!IsPostBack)
             {
                  Db.getProdotti(prodotti);
-                 Db.getCategorie(Categorie);
+                Db.getCategorie(Categorie);
             }
      
         }
@@ -40,8 +40,7 @@ namespace Epieuro
             Session["carrello"] = carrello;
             Response.Redirect("Carrello.aspx");
         }
-
-        protected void btnCat1_Click(object sender, EventArgs e)
+        protected void btnCat1_Click1(object sender, EventArgs e)
         {
             Db.getCategorie(Categorie);
         }
