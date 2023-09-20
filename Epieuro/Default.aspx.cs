@@ -42,11 +42,18 @@ namespace Epieuro
             Session["carrello"] = carrello;
             Response.Redirect("UserAuth/Carrello.aspx");
         }
+
+
+
+
+
         protected void btnCat1_Click1(object sender, EventArgs e)
         {
             Button button = ( sender as Button );
             int id = Convert.ToInt32(button.CommandArgument);
             Db.getPrdCategoria(prodotti,id);
         }
+
+        
     }
 }
