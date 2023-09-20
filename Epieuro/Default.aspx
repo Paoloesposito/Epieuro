@@ -116,7 +116,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B;">
         <!-- Container wrapper -->
-        <div class="container-fluid">
+            <div class="container">
 
             <!-- Navbar brand -->
             <a class="navbar-brand" href="#">Categories:</a>
@@ -213,6 +213,7 @@
             <!-- Pagination -->
         </div>
         <div/>
+        </div>
         </div>
         <!--Main layout-->
 </asp:Content>
