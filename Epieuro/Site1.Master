@@ -47,18 +47,19 @@
                         </a>
                         <!-- Left links -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link " href="https://mdbootstrap.com/">Home</a>
+                            <li>
+                                <a class="nav-link text-white fw-bold" aria-current="page" href="/Default.aspx">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/">About MDB</a>
+                            <li>
+                                <a class="nav-link text-white fw-bold" href="UserAuth/carrello.aspx">Carrello</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/getting-started/installation/">Free download</a>
+                            <li>
+                                <a class="nav-link text-white fw-bold" href="login.aspx">Login</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+                            <li>
+                                <a class="nav-link text-white fw-bold" aria-disabled="true">Tutte le categorie</a>
                             </li>
+
                         </ul>
                         <!-- Left links -->
                     </div>
@@ -67,6 +68,7 @@
                     <!-- Right elements -->
                     <div class="d-flex align-items-center">
                         <!-- Icon -->
+    <asp:LinkButton ID="LogoutButton1" CssClass="nav-link text-white fw-bold" runat="server" OnClick="LogoutButton1_Click">logout</asp:LinkButton>
                         <a class="nav-link me-3" href="#">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="badge rounded-pill badge-notification bg-danger">1</span>
