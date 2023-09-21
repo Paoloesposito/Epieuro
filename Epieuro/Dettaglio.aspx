@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dettaglio.aspx.cs" Inherits="Epieuro.Dettaglio" %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dettaglio.aspx.cs" Inherits="Epieuro.Dettaglio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="stile-dettagli.css" rel="stylesheet" />
@@ -43,16 +43,17 @@
                     <div class="d-flex justify-content-left">
                         <!-- Default input -->
                         <div class="form-outline me-1" style="width: 100px;">
-                            <input type="number" value="1" class="form-control" />
+                            <input type="number" runat="server" id="quantita" value="1" class="form-control" />
                         </div>
                         
-                        
-                        
-                        
-                        <button class="btn btn-primary ms-1" type="submit" runat="server" id="addCart" onclick="addCart_Click">
+                       
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                             
+                       
+                       <%-- <button class="btn btn-primary ms-1" type="submit" runat="server" id="addCart" onclick="addCart_Click">
                             Add to cart
                             <i class="fas fa-shopping-cart ms-1"></i>
-                        </button>
+                        </button>--%>
                     </div>
                 </div>
                 <!--Content-->

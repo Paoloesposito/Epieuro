@@ -43,23 +43,23 @@
                 <ItemTemplate>
                     <%# Item.Prezzo %>
                     <div>
-                        <asp:Button ID="Elimina" runat="server" CssClass="btn btn-outline-danger" Text="Button" CommandArgument="<%# Item.IdProdotto %>" OnClick="Elimina_Click" />
+                       
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
     <div id="totaleTesto" runat="server" class="d-flex justify-content-between me-2">
-        <asp:Button ID="ButtonSvuotaCarrello" CssClass="custom-btn" runat="server" Text="Svuota Carrello" OnClick="ButtonSvuotaCarrello_Click" />
-        <asp:Label ID="totale" CssClass="fw-bold text-white" runat="server" Text="Label"></asp:Label>
+        
+       
     </div>
-    <div class="d-flex align-items-center mt-5" id="carrelloBoxVuoto" runat="server">
+    <%--<div class="d-flex align-items-center mt-5" id="carrelloBoxVuoto" runat="server">
         <img id="imgCarrelloVuoto" src="ImgCarrello/carrelloVuoto.png" />
         <h1 id="carrelloVuoto" class="textCarrelloVuoto" runat="server"></h1>
-    </div>
- 
-   <%-- CIAO*************************************************************************** --%>
-<div class="d-flex justify-content-between">
+    </div>--%>
+
+    <%-- CIAO*************************************************************************** --%>
+    <%--<div class="d-flex justify-content-between">
         <div id="checkout" class="w-lg-100  ">
             <main class="mt-5 pt-4">
     <div class="container-fluid">
@@ -348,6 +348,136 @@
                      </div>
                  </div>
         </div>
-    </div>
+    </div>--%>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <asp:Repeater ID="Repeater1" runat="server" ItemType="Epieuro.Classi.Prodotto">
+                    <ItemTemplate>
+                <div class="col-md-9">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <span class="pull-right">(<strong>5</strong>) items</span>
+                            <h5>Items in your cart</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+                                    <tbody>
+                                        <tr>
+                                            <td width="90">
+                                                <div class="cart-product-imitation">
+                                                </div>
+                                            </td>
+                                            <td class="desc">
+                                                <h3>
+                                                    <a href="#" class="text-navy"><%# Item.Nome %>
+                                                    </a>
+                                                </h3>
+                                                <p class="small">
+                                                <%# Item.DescrizioneBreve %>
+                                                </p>
+                                                <dl class="small m-b-none">
+                                                    <dt>Description lists</dt>
+                                                    <dd>A description list is perfect for defining terms.</dd>
+                                                </dl>
 
+                                                <div class="m-t-sm">
+                                                    <a href="Dettaglio.aspx" class="text-muted"><i class="fa fa-gift"></i>Details</a>
+                                                    |
+                                                     <asp:Button ID="Elimina" runat="server" CssClass="btn btn-outline-danger" Text="Button" CommandArgument="<%# Item.IdProdotto %>" OnClick="Elimina_Click" />
+                                      <i class="fa fa-trash"></i>Remove item
+                                                </div>
+                                            </td>
+
+                                            <td><%# Item.Prezzo %>
+                                    <s class="small text-muted">$230,00</s>
+                                            </td>
+                                            <td width="65">
+                                                <input type="text" class="form-control" placeholder="<%# Item.quantitaAcquistata %>">
+                                            </td>
+                                            <td>
+                                                <h4><%# Item.Prezzo %>
+                                                </h4>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <div class="ibox-content">
+                            <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i>Checkout</button>
+                            <button class="btn btn-white"><i class="fa fa-arrow-left"></i>Continue shopping</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Cart Summary</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <span>Total
+                            </span>
+                             <asp:Label ID="totale" CssClass="fw-bold text-white" runat="server" Text="Label"></asp:Label>
+
+                            <hr>
+                            <span class="text-muted small">*For United States, France and Germany applicable sales tax will be applied
+                            </span>
+                            <div class="m-t-sm">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i>Checkout</a>
+                                    <asp:Button ID="ButtonSvuotaCarrello" CssClass="custom-btn" runat="server" Text="Svuota Carrello" OnClick="ButtonSvuotaCarrello_Click" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Support</h5>
+                        </div>
+                        <div class="ibox-content text-center">
+                            <h3><i class="fa fa-phone"></i>+43 100 783 001</h3>
+                            <span class="small">Please contact with us if you have any questions. We are avalible 24h.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+
+                            <p class="font-bold">
+                                Other products you may be interested
+                            </p>
+                            <hr>
+                            <div>
+                                <a href="#" class="product-name">Product 1</a>
+                                <div class="small m-t-xs">
+                                    Many desktop publishing packages and web page editors now.
+                                </div>
+                                <div class="m-t text-righ">
+
+                                    <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <a href="#" class="product-name">Product 2</a>
+                                <div class="small m-t-xs">
+                                    Many desktop publishing packages and web page editors now.
+                                </div>
+                                <div class="m-t text-righ">
+
+                                    <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </asp:Content>

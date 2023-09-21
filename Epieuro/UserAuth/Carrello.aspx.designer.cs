@@ -33,13 +33,13 @@ namespace Epieuro
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl totaleTesto;
 
         /// <summary>
-        /// Controllo ButtonSvuotaCarrello.
+        /// Controllo Repeater1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSvuotaCarrello;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
 
         /// <summary>
         /// Controllo totale.
@@ -51,21 +51,12 @@ namespace Epieuro
         protected global::System.Web.UI.WebControls.Label totale;
 
         /// <summary>
-        /// Controllo carrelloBoxVuoto.
+        /// Controllo ButtonSvuotaCarrello.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloBoxVuoto;
-
-        /// <summary>
-        /// Controllo carrelloVuoto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloVuoto;
+        protected global::System.Web.UI.WebControls.Button ButtonSvuotaCarrello;
     }
 }
