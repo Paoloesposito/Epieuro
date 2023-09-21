@@ -15,13 +15,22 @@
       border-bottom-left-radius: 0.5rem;
     }
   }
+  #loginSection{
+      height:80vh;
+
+  }
+
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section class=" text-center text-lg-start ">
-        <div class="row justify-content-center">
-            <div class="col-6">
+
+    <section class=" text-center text-lg-start " id="loginSection">
+        <div class="container h-100 d-flex align-content-center">
+
+        
+        <div class="row">
+            <div class="col col-12 col-md-8 col-lg-6 flex-grow-1 d-flex align-items-center">
 
             
         
@@ -55,14 +64,14 @@
                                 <div class="col d-flex justify-content-center">
                                     <!-- Checkbox -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
-                                        <label class="form-check-label" for="form2Example31">Remember me </label>
+                                        <input class="form-check-input" type="checkbox" value="" id="ricordami" runat="server" />
+                                        <label class="form-check-label" for="ricordami">Remember me </label>
                                     </div>
                                 </div>
 
                                 <div class="col">
                                     <!-- Simple link -->
-                                    <a href="/newregister.aspx">non sei ancora registrato? registrati!</a>
+                                    <a href="Register.aspx">non sei ancora registrato? registrati!</a>
                                 </div>
                             </div>
 
@@ -75,6 +84,7 @@
                 </div>
             </div>
         </div>
+                </div>
                 </div>
             </div>
     </section>

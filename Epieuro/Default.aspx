@@ -98,7 +98,7 @@
             <div class="container">
 
                 <!-- Navbar brand -->
-                <a class="navbar-brand boxCategorie text-secondary fw-bold" href="#">Categorie:</a>
+                <a class="navbar-brand boxCategorie text-secondary fw-bold" href="Default.aspx">Categorie:</a>
 
                 <!-- Toggle button -->
                 <%--  <button

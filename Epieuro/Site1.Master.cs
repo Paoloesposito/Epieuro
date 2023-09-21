@@ -12,10 +12,12 @@ namespace Epieuro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Login.isLoggedIn == true)
+            
+            if (Request.Cookies[".ASPXAUTH"] != null&& Request.Cookies["userLoged"]!=null)
             {
+
                 LogoutButton1.Text = "Logout";
-                NomeUtente.Text = $"Benvenuto, {Login.utente.Nome.ToString()}" ;
+                NomeUtente.Text = $"Benvenuto {Request.Cookies["userLoged"]["username"].ToString()} {Request.Cookies["userLoged"]["cognome"].ToString()}" ;
             }
             else
             {
@@ -25,11 +27,15 @@ namespace Epieuro
 
         protected void LogoutButton1_Click(object sender, EventArgs e)
         {
-            if(Login.isLoggedIn == true)
+            if(Request.Cookies[".ASPXAUTH"] != null && Request.Cookies["userLoged"] != null)
             {
                 
                 FormsAuthentication.SignOut();
-                Login.isLoggedIn = false;
+
+                HttpCookie login = Request.Cookies["userLoged"];
+
+                login.Expires = DateTime.Now.AddMinutes(-1);
+                Response.Cookies.Add(login);
                 Response.Redirect(FormsAuthentication.DefaultUrl);
             }
             else
