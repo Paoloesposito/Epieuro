@@ -64,14 +64,14 @@
                                 <div class="col d-flex justify-content-center">
                                     <!-- Checkbox -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
-                                        <label class="form-check-label" for="form2Example31">Remember me </label>
+                                        <input class="form-check-input" type="checkbox" value="" id="ricordami" runat="server" />
+                                        <label class="form-check-label" for="ricordami">Remember me </label>
                                     </div>
                                 </div>
 
                                 <div class="col">
                                     <!-- Simple link -->
-                                    <a href="/newregister.aspx">non sei ancora registrato? registrati!</a>
+                                    <a href="Register.aspx">non sei ancora registrato? registrati!</a>
                                 </div>
                             </div>
 
