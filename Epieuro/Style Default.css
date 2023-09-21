@@ -2,42 +2,21 @@
    
 }
 
-.custom-btn {
-    background-color: #FF7B2C;
-    border: none;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    font-weight:bold; 
-    font-size: 14px;
-    padding: 10px 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-    text-decoration: none;
+.buttonCategorie{
+}
+.boxScroll{
+    overflow: scroll;
+    background-color: #eeee;
+}
+.boxCategorie {
+    background-color: #eeee;
 }
 
-.custom-btn2 {
-    background: #ffffff;
-    border: 4px solid #FF7B2C;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 1px #444444;
-    color: #FF7B2C;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 6px 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-    text-decoration: none;
+.custom-btn:hover {
+    color: #85cfce;
 }
-    .custom-btn:hover {
-        color: #1D15B3;
-    }
 .carousel-item {
-    height: 50vh;
+    height: 70vh;
 }
 
 .card {
@@ -69,3 +48,8 @@
 .sale-badge {
     background-color: #E53935;
 }
+/*Carosello immagini*/
+
+
+
+/**/
