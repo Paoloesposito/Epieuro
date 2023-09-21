@@ -26,21 +26,23 @@
         </div>
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form">
+        <div class="form-horizontal" role="form">
           <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
+            <label class="col-lg-3 control-label">Nome prodotto:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="dey-dey">
+                <asp:TextBox ID="TextBox1" runat="server" placeholder="Nome"></asp:TextBox>
+              <%--<input class="form-control" type="text" value="dey-dey">--%>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
+            <label class="col-lg-3 control-label">Descrizione breve:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="bootdey">
+                <asp:TextBox ID="TextBox2" runat="server" placeholder="descrizione breve"></asp:TextBox>
+              <%--<input class="form-control" type="text" value="bootdey">--%>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Company:</label>
+            <label class="col-lg-3 control-label">Quantità:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="">
             </div>
@@ -68,7 +70,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
   </div>
 </div>
