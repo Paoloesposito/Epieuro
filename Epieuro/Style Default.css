@@ -5,9 +5,14 @@
 .buttonCategorie{
 }
 .boxScroll{
-    overflow: scroll;
+    overflow-x: auto;
     background-color: #eeee;
 }
+
+.boxScroll::-webkit-scrollbar{
+    width: 0;
+}
+
 .boxCategorie {
     background-color: #eeee;
 }
