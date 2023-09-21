@@ -112,7 +112,7 @@
             </div>
 
             <!--Footer-->
-            <footer class="text-center text-white mt-4" style="background-color: #607D8B">
+            <footer class="text-center text-white mt-4 sticky" style="background-color: #607D8B">
 
 
 
