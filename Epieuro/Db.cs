@@ -1,4 +1,5 @@
 ﻿using Epieuro.Classi;
+using Epieuro.UserAuth;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -215,5 +216,40 @@ namespace Epieuro
             finally { conn.Close(); }
         }
 
+        public static string PopulateDashboard()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "select prodotti.IdProdotto as idprodotto, prodotti.Nome as nome, prodotti.Quantita as quantita, BRAND.NomeBrand as brand, prodotti.Prezzo as prezzo, CATEGORIA.Nome as nomeCategoria from prodotti\r\nleft join CATEGORIA on prodotti.IdCategoria = categoria.IdCategoria \r\nleft join BRAND on PRODOTTI.IdBrand = BRAND.IdBrand";
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            string htmltext = "";
+
+            while(sqlDataReader.Read())
+            {
+                string idProdotto = sqlDataReader["idProdotto"].ToString();
+                string nomeProdotto = sqlDataReader["nome"].ToString();
+                string quantitaProdotto = sqlDataReader["quantita"].ToString() ;
+                string brandProdotto = sqlDataReader["brand"].ToString();
+                string prezzoProdotto = sqlDataReader["prezzo"].ToString();
+                string categoriaProdotto = sqlDataReader["nomeCategoria"].ToString();
+
+                htmltext += $"<tr>\r\n " +
+                    $"      <th scope=\"row\">{idProdotto}</th>\r\n " +
+                    $"      <td>{nomeProdotto}</td>\r\n " +
+                    $"      <td>{quantitaProdotto}</td>\r\n" +
+                    $"      <td>{brandProdotto}</td>\r\n  " +
+                    $"      <td>{prezzoProdotto}</td>\r\n  " +
+                    
+                    $"      <td>{categoriaProdotto}</td>\r\n " +
+                    $"      <td><a href=\"https://localhost:44326/UserAuth/ModificaArticolo.aspx?id={idProdotto}\">Dettagli</a></td>\r\n " +
+                $"      </tr>";
+                
+            }
+            conn.Close();
+            return htmltext;
+        }
     }
 }

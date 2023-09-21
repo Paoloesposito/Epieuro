@@ -11,7 +11,7 @@ namespace Epieuro.UserAuth
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            tbody.InnerHtml = Db.PopulateDashboard();
         }
     }
 }
