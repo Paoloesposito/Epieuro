@@ -17,7 +17,7 @@ namespace Epieuro
             {
 
                 LogoutButton1.Text = "Logout";
-                NomeUtente.Text = $"Benvenuto, {Request.Cookies["userLoged"].ToString()}" ;
+                NomeUtente.Text = $"Benvenuto {Request.Cookies["userLoged"]["username"].ToString()} {Request.Cookies["userLoged"]["cognome"].ToString()}" ;
             }
             else
             {
