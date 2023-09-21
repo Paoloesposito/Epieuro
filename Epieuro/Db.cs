@@ -176,29 +176,28 @@ namespace Epieuro
         {
             try
             {
-                SqlCommand cmd = new SqlCommand($"select * from UTENTE where email = @email", conn);
-                cmd.Parameters.AddWithValue ("email", email);
+                SqlCommand cmd = new SqlCommand("select * from UTENTE INNER JOIN RUOLI ON UTENTE.IdRuolo = RUOLI.IdRuolo WHERE UTENTE.Email = @email", conn);
+                cmd.Parameters.AddWithValue ("@email", email);
                 SqlDataReader sqldatareader;
                 conn.Open();
                 sqldatareader = cmd.ExecuteReader();
+                              
                
-                //string nome = "";
-                //string cognome = "";
-                
-                
                 User myUser= new User();
                 while(sqldatareader.Read())
                 {
                     User user = new User(
+                    Convert.ToInt32(sqldatareader["IdUser"]),
                     sqldatareader["Nome"].ToString(),
                     sqldatareader["Cognome"].ToString(),
                     sqldatareader["Email"].ToString(),
                     sqldatareader["Password"].ToString(),
                     sqldatareader["FotoProfilo"].ToString(),
-                    Convert.ToInt32(sqldatareader["IdRuolo"])
+                    Convert.ToInt32(sqldatareader["IdRuolo"]),
+                    sqldatareader["Ruolo"].ToString()
                     
                     );
-                    user.IdUser = Convert.ToInt32(sqldatareader["idUser"]);
+                    
 
                     myUser = user;
                 }

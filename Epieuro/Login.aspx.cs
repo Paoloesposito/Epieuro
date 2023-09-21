@@ -26,36 +26,49 @@ namespace Epieuro
             utente = Db.GetUser(EmailLogin.Text);
             if (utente.Email == EmailLogin.Text && utente.Password == PasswordLogin.Text)
             {
-                if(ricordami.Checked)
-                {
-                FormsAuthentication.SetAuthCookie(utente.Nome, true);
-                HttpCookie login = new HttpCookie("userLoged");
-                    login.Values["username"] = utente.Nome;
-                    login.Values["cognome"] = utente.Cognome;
-                    login.Expires = DateTime.Now.AddDays(10);
-                    Response.Cookies.Add(login);
+
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+                    1,
+                    utente.Email,
+                    DateTime.Now,
+                    DateTime.Now.AddDays(1),
+                    ricordami.Checked,
+                    utente.nomeRuolo
+                    );
                     
-                    isLoggedIn = true;
-                Response.Redirect(FormsAuthentication.DefaultUrl);
-                }
-                else 
+                string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+                
+                HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+
+                Response.Cookies.Add(authCookie);
+                if(utente.nomeRuolo == "admin")
                 {
-                    FormsAuthentication.SetAuthCookie(EmailLogin.Text, false);
-                    HttpCookie login = new HttpCookie("userLoged");
-                    login.Values["username"] = utente.Nome;
-                    login.Values["cognome"] = utente.Cognome;
-                    Response.Cookies.Add(login);
-                    isLoggedIn = true;
-                    Response.Redirect(FormsAuthentication.DefaultUrl);
-
+                    // inserire codice redirect su la dashboard
+                    //Response.Redirect(FormsAuthentication.DefaultUrl);
                 }
-
-
+                else
+                {
+                    Response.Redirect("Default.aspx");
+                }
             }
-            else
+            else 
             {
-                Response.Redirect(FormsAuthentication.LoginUrl);
+                Response.Redirect(FormsAuthentication.DefaultUrl);
             }
+                
+                
+                //FormsAuthentication.SetAuthCookie(utente.Nome, true);
+                //HttpCookie login = new HttpCookie("userLoged");
+                //    login.Values["username"] = utente.Nome;
+                //    login.Values["cognome"] = utente.Cognome;
+                //    login.Expires = DateTime.Now.AddDays(10);
+                //    Response.Cookies.Add(login);
+
+                //    isLoggedIn = true;
+                //Response.Redirect(FormsAuthentication.DefaultUrl);
         }
+                
+            
+           
     }
 }
