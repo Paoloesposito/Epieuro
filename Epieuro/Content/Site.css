@@ -29,8 +29,7 @@ textarea {
     background-color: lightyellow;
 }
 .nav-link:hover {
-    background-color: #FF7B2C;
-    border-radius:10px;
+    color: #f4c2ac !important;
 }
 body {
 }

@@ -52,7 +52,6 @@ namespace Epieuro
             Button button = ( sender as Button );
             int id = Convert.ToInt32(button.CommandArgument);
             Db.getPrdCategoria(prodotti,id);
-                        
         }
 
         

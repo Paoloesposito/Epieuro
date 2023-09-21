@@ -33,70 +33,43 @@
             </button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%282%29.jpg" class="d-block w-100" alt="Wild Landscape" />
-                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+            <div class="carousel-item active boxImmagineCarosello d-flex justify-content-center">
+                <img src="ContenutiCarosello/immagineCarosello.png" class="d-block" alt="Wild Landscape" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.2)"></div>
                 <div class="carousel-caption d-none d-sm-block mb-5">
-                    <h1 class="mb-4">
-                        <strong>Learn Bootstrap 5 with MDB</strong>
+                    <h1 class="mb-4 d-none d-md-block">
+                        <strong>Qualunque Siano le Tue Necessità, EpiEuro Farà al Caso Tuo.</strong>
                     </h1>
 
-                    <p>
-                        <strong>Best & free guide of responsive web design</strong>
-                    </p>
-
-                    <p class="mb-4 d-none d-md-block">
-                        <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
-         available. Create your own, stunning website.</strong>
-                    </p>
-
-                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
+                    <a href="#sectProd" class="btn btn-secondary btn-lg">Start Shop
        <i class="fas fa-graduation-cap ms-2"></i>
                     </a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%283%29.jpg" class="d-block w-100" alt="Camera" />
-                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+                <img src="ContenutiCarosello/immagineCarosello2.png" class="d-block" alt="Camera" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.2)"></div>
                 <div class="carousel-caption d-none d-md-block mb-5">
                     <h1 class="mb-4">
-                        <strong>Learn Bootstrap 5 with MDB</strong>
+                        <strong></strong>
                     </h1>
 
                     <p>
-                        <strong>Best & free guide of responsive web design</strong>
+                        <strong></strong>
                     </p>
 
                     <p class="mb-4 d-none d-md-block">
-                        <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
-         available. Create your own, stunning website.</strong>
+                        <strong></strong>
                     </p>
 
-                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
-       <i class="fas fa-graduation-cap ms-2"></i>
-                    </a>
+                  
+                    
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%285%29.jpg" class="d-block w-100" alt="Exotic Fruits" />
-                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+                <img src="ContenutiCarosello/immagine3.png" class="d-block" alt="Exotic Fruits" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.2)"></div>
                 <div class="carousel-caption d-none d-md-block mb-5">
-                    <h1 class="mb-4">
-                        <strong>Learn Bootstrap 5 with MDB</strong>
-                    </h1>
-
-                    <p>
-                        <strong>Best & free guide of responsive web design</strong>
-                    </p>
-
-                    <p class="mb-4 d-none d-md-block">
-                        <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
-         available. Create your own, stunning website.</strong>
-                    </p>
-
-                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
-       <i class="fas fa-graduation-cap ms-2"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -114,15 +87,15 @@
     <!--Main layout-->
     <div class="container-fluid">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B;">
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2 boxScroll">
         <!-- Container wrapper -->
             <div class="container">
 
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Categories:</a>
+            <a class="navbar-brand boxCategorie" href="#">Categories:</a>
 
             <!-- Toggle button -->
-            <button
+          <%--  <button
                 class="navbar-toggler"
                 type="button"
                 data-mdb-toggle="collapse"
@@ -131,15 +104,15 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
-            </button>
+            </button>--%>
             <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <%--<div class="collapse navbar-collapse" id="navbarSupportedContent2">--%>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <asp:Repeater ID="Categorie" runat="server" ItemType="Epieuro.Classi.Categorie">
                     <ItemTemplate>
                         
                             <li class="nav-item acitve">
-                             <asp:Button ID="btnCat1" CssClass="custom-btn w-100" runat="server" Text="<%#Item.Nome %>" CommandArgument="<%#Item.IdCategoria %>" OnClick="btnCat1_Click1" />
+                             <asp:Button ID="btnCat1" CssClass="buttonCategorie btn btn-secondary me-3" runat="server" Text="<%#Item.Nome %>" CommandArgument="<%#Item.IdCategoria %>" OnClick="btnCat1_Click1" />
                             </li>
                        
                     </ItemTemplate>
@@ -149,7 +122,7 @@
                 <%-- <form class="w-auto py-1" style="max-width: 12rem">
                            <input type="search" class="form-control rounded-0" placeholder="Search" aria-label="Search"/>
                        </form>--%>
-            </div>
+          <%--  </div>--%>
         </div>
         <!-- Container wrapper -->
     </nav>
@@ -158,7 +131,7 @@
     <!-- Products -->
 
     <div class="text-center">
-        <div class="row">
+        <div id="sectProd" class="row">
             <asp:Repeater ID="prodotti" runat="server" ItemType="Epieuro.Classi.Prodotto">
                 <ItemTemplate>
                     <div class="col-lg-3 col-md-6 mb-4">
