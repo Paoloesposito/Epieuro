@@ -10,65 +10,97 @@
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
-          <h6>Upload a different photo...</h6>
+            <div style="background-image: url(https://clipart-library.com/images_k/smartphone-png-transparent/smartphone-png-transparent-22.png);max-width: 700px; height: 400px; background-repeat:no-repeat; background-size:contain; background-position:center">
+          <%--<img src="https://clipart-library.com/images_k/smartphone-png-transparent/smartphone-png-transparent-22.png" class="w-100" alt="avatar">--%>
+             </div>
+          <h6 >Upload a different photo...</h6>
           
-          <input type="file" class="form-control">
+          <input  type="file" class="form-control mb-4">
         </div>
       </div>
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
-          <i class="fa fa-coffee"></i>
-          This is an <strong>.alert</strong>. Use this to show important messages to the user.
-        </div>
-        <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form">
+        <h3 class="offset-md-3">Modifica Prodotto</h3>
+        
+        <div class="form-horizontal" role="form">
           <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="dey-dey">
+            <label class="col-lg-3 offset-md-3 control-label">Nome prodotto:</label>
+            <div class="col-lg-8 offset-md-3">
+                <asp:TextBox ID="TextBox1" CssClass="w-100" runat="server" ></asp:TextBox>
+              <%--<input class="form-control" type="text" value="dey-dey">--%>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="bootdey">
+            <label class="col-lg-3 offset-md-3 control-label">Descrizione breve:</label>
+            <div class="col-lg-8 offset-md-3">
+                <asp:TextBox ID="TextBox2" CssClass="w-100" runat="server"></asp:TextBox>
+              <%--<input class="form-control" type="text" value="bootdey">--%>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Company:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+            <label class="col-lg-3 offset-md-3 control-label">Descrizione lunga:</label>
+            <div class="col-lg-8 offset-md-3">
+                <asp:TextBox ID="TextBox3" CssClass="w-100" runat="server"></asp:TextBox>
+              <%--<input class="form-control" type="text" value="">--%>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="janesemail@gmail.com">
+        <div class="form-group">
+            <label class="col-lg-3 offset-md-3 control-label">Specifiche prodotto:</label>
+            <div class="col-lg-8 offset-md-3">
+                <asp:TextBox ID="TextBox4" CssClass="w-100" runat="server"></asp:TextBox>
+                <%--<input class="form-control" type="text" value="">--%>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Time Zone:</label>
-            <div class="col-lg-8">
-              <div class="ui-select">
-                <select id="user_time_zone" class="form-control">
-                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                  <option value="Alaska">(GMT-09:00) Alaska</option>
-                  <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                  <option value="Arizona">(GMT-07:00) Arizona</option>
-                  <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                  <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                  <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                  <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                </select>
-              </div>
+        </div>
+
+
+
+            <div class="form-group">
+                <label class="col-lg-3 offset-md-3 control-label">Quantità:</label>
+                <div class="col-lg-8 offset-md-3">
+                    <input type="number" class="form-control">
+                </div>
             </div>
-          </div>
-        </form>
+            <div class="w-100 d-flex gap-4 offset-md-3">
+
+                <div class="form-group">
+    <label class="col-lg-3 offset-md-3 control-label">Categoria:</label>
+    <div class="col-lg-8 offset-md-3">
+        <div class="ui-select">
+            <asp:DropDownList ID="Categorie" runat="server">
+                <asp:ListItem>Tutte le categorie...</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+
+                <asp:ListItem></asp:ListItem>
+
+                <asp:ListItem></asp:ListItem>
+
+                <asp:ListItem></asp:ListItem>
+
+            </asp:DropDownList>
+
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-lg-3 offset-md-3 control-label">Marchio:</label>
+    <div class="col-lg-8 offset-md-3">
+        <div class="ui-select">
+            <asp:DropDownList ID="BrandList" runat="server">
+                <asp:ListItem>tutti i brand...</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+            </asp:DropDownList>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
       </div>
   </div>
 </div>
