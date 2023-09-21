@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Carrello-Stile.css" />
+    <Content Include="Content\master page.css" />
     <Content Include="ContenutiCarosello\About.png" />
     <Content Include="ContenutiCarosello\Contact.png" />
     <Content Include="ContenutiCarosello\Home.png" />

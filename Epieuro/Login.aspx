@@ -15,13 +15,22 @@
       border-bottom-left-radius: 0.5rem;
     }
   }
+  #loginSection{
+      height:80vh;
+
+  }
+
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section class=" text-center text-lg-start ">
-        <div class="row justify-content-center">
-            <div class="col-6">
+
+    <section class=" text-center text-lg-start " id="loginSection">
+        <div class="container h-100 d-flex align-content-center">
+
+        
+        <div class="row">
+            <div class="col col-12 col-md-8 col-lg-6 flex-grow-1 d-flex align-items-center">
 
             
         
@@ -75,6 +84,7 @@
                 </div>
             </div>
         </div>
+                </div>
                 </div>
             </div>
     </section>
