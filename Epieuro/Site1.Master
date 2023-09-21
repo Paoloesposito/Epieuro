@@ -99,7 +99,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             <!--Footer-->
-            <footer class="text-center text-white mt-4" style="background-color: #607D8B">
+            <footer class="text-center text-white mt-4 sticky" style="background-color: #607D8B">
 
                 <!--Call to action-->
                 <div class="pt-4 pb-2">
