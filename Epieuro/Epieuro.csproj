@@ -103,9 +103,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Carrello-Stile.css" />
-    <Content Include="ContenutiCarosello\immagine3.png" />
+    <Content Include="ContenutiCarosello\About.png" />
+    <Content Include="ContenutiCarosello\Contact.png" />
+    <Content Include="ContenutiCarosello\Home.png" />
+    <Content Include="ContenutiCarosello\ImgCarosello2.png" />
+    <Content Include="ContenutiCarosello\ImgCarosello3.png" />
+    <Content Include="ContenutiCarosello\ImgCarosello4.png" />
     <Content Include="ContenutiCarosello\immagineCarosello.png" />
-    <Content Include="ContenutiCarosello\immagineCarosello2.png" />
+    <Content Include="ContenutiCarosello\Products.png" />
+    <Content Include="ContenutiCarosello\Support.png" />
     <Content Include="UserAuth\Carrello.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
