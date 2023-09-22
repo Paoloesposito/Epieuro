@@ -14,32 +14,39 @@ namespace Epieuro
         protected void Page_Load(object sender, EventArgs e)
         {
             bool admin;
-            
-            
-            
+            bool IsLogged;
             
             if (!IsPostBack)
             {
 
             if (Request.Cookies[".ASPXAUTH"] != null)
             {
-
+                    IsLogged = true;
+                    ImgProfilo.Visible = IsLogged;
                 LogoutButton1.Text = "Logout";
                 FormsIdentity identity = HttpContext.Current.User.Identity as FormsIdentity;
                 FormsAuthenticationTicket ticket = identity.Ticket;
                 string nome = ticket.Name;
                 User utente = Db.GetUser(nome);
+                    ImgProfilo.ImageUrl = $"Content/UserImg/imgUserProfiloNav.png";
                     admin = Db.isAdmin();
+
 
                 NomeUtente.Text = $"Benvenuto {utente.Nome}" ;
                 adminPage.Visible = admin;
             }
             else
             {
+                   
                     admin = false;
                     adminPage.Visible = false;
                 LogoutButton1.Text = "Login";
             }
+            }
+            else
+            {
+                IsLogged = false;
+                ImgProfilo.Visible = IsLogged;
             }
         }
 

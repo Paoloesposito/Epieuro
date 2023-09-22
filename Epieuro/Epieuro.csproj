@@ -103,6 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Carrello-Stile.css" />
+    <Content Include="Content\UserImg\800px-Franky.png" />
+    <Content Include="Content\UserImg\imgUserProfiloNav.png" />
     <Content Include="ContenutiCarosello\About.png" />
     <Content Include="ContenutiCarosello\Contact.png" />
     <Content Include="ContenutiCarosello\Home.png" />
@@ -330,7 +332,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\UserImg\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
