@@ -69,3 +69,7 @@ body {
     .Interested::-webkit-scrollbar {
         width: 0;
     }
+.profileImage{
+    width: 40px;
+    border-radius: 100%;
+}
