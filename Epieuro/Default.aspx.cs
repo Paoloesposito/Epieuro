@@ -18,6 +18,11 @@ namespace Epieuro
             {
                  Db.getProdotti(prodotti);
                 Db.getCategorie(Categorie);
+
+                if (Session["crea"]!= null)
+                {
+                    Session.Remove("crea");
+                }
             }
      
         }

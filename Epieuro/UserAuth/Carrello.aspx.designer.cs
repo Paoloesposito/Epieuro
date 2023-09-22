@@ -15,31 +15,40 @@ namespace Epieuro
     {
 
         /// <summary>
-        /// Controllo carrelloGrid.
+        /// Controllo prodottiCarrello.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView carrelloGrid;
+        protected global::System.Web.UI.WebControls.Repeater prodottiCarrello;
 
         /// <summary>
-        /// Controllo totaleTesto.
+        /// Controllo Acquistato.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totaleTesto;
+        protected global::System.Web.UI.WebControls.Label Acquistato;
 
         /// <summary>
-        /// Controllo Repeater1.
+        /// Controllo carrelloBoxVuoto.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloBoxVuoto;
+
+        /// <summary>
+        /// Controllo imgCarrello.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgCarrello;
 
         /// <summary>
         /// Controllo totale.
@@ -49,6 +58,24 @@ namespace Epieuro
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label totale;
+
+        /// <summary>
+        /// Controllo totaleModale.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totaleModale;
+
+        /// <summary>
+        /// Controllo CheckOut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckOut;
 
         /// <summary>
         /// Controllo ButtonSvuotaCarrello.

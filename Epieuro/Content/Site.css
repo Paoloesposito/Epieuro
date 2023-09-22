@@ -62,3 +62,10 @@ body {
 .sale-badge {
     background-color: #E53935;
 }
+.Interested {
+    overflow-y: scroll;
+}
+
+    .Interested::-webkit-scrollbar {
+        width: 0;
+    }
