@@ -373,7 +373,22 @@ namespace Epieuro
 
 
         }
+        public static void deletePrd(Prodotto prd)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand delete = new SqlCommand("DELETE FROM PRODOTTI WHERE IdProdotto =@IdProdotto", conn);
+                delete.Parameters.AddWithValue("IdProdotto", prd.IdProdotto);
 
+                delete.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { conn.Close(); };
+        }
 
 
 
