@@ -140,7 +140,6 @@
     <Content Include="Login.aspx" />
     <Content Include="PaginaDefaultProva.aspx" />
     <Content Include="PaginaProva_Stile.css" />
-    <Content Include="Prodotti\Telefonia\Immagini\Alcatel 1.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\amazfit.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\bellissima-creativity-b9-400.jpg" />
     <Content Include="Prodotti\Telefonia\Immagini\Brondi Cordless.jpg" />

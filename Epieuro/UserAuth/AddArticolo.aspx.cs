@@ -17,10 +17,28 @@ namespace Epieuro.UserAuth
 
         protected void aggiungi_Click(object sender, EventArgs e)
         {
-          
+            string FotoName = "";
+            if (Foto.HasFile)
+            {
+                FotoName = Foto.FileName;
+                Foto.SaveAs(Server.MapPath($"../Content/UserImg/{Foto.FileName}"));
+            }
 
+            
+            Prodotto prd = new Prodotto(
+                Nome.Text,
+                DescBrev.Text,
+                DescrizioneEstesa.Text,
+                1,
+                FotoName,
+                Specifiche.Text,
+                Convert.ToDouble(prezzo.Text),
+                1,
+                1
+                 );
 
-
+            Db.addPrd( prd );
+            Response.Redirect("TuttiGliArticoli");
 
 
         }

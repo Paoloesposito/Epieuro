@@ -344,8 +344,8 @@ namespace Epieuro
                 conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO PRODOTTI (Nome, DescrizioneBreve, DescrizioneEstesa, Prezzo, Quantita, FotoPrincipale, Specifiche, IdCategoria, IdBrand, IdProdotto) " +
-                                  "VALUES (@Nome, @DescrizioneBreve, @DescrizioneEstesa, @Prezzo, @Quantita, @FotoPrincipale, @Specifiche, @IdCategoria, @IdBrand, @IdProdotto)";
+                cmd.CommandText = "INSERT INTO PRODOTTI (Nome, DescrizioneBreve, DescrizioneEstesa, Prezzo, Quantita, FotoPrincipale, Specifiche, IdCategoria, IdBrand) " +
+                                  "VALUES (@Nome, @DescrizioneBreve, @DescrizioneEstesa, @Prezzo, @Quantita, @FotoPrincipale, @Specifiche, @IdCategoria, @IdBrand)";
 
                 cmd.Parameters.AddWithValue("@Nome", prd.Nome);
                 cmd.Parameters.AddWithValue("@DescrizioneBreve", prd.DescrizioneBreve);
@@ -356,7 +356,7 @@ namespace Epieuro
                 cmd.Parameters.AddWithValue("@Specifiche", prd.Specifiche);
                 cmd.Parameters.AddWithValue("@IdCategoria", prd.IdCategoria);
                 cmd.Parameters.AddWithValue("@IdBrand", prd.IdBrand);
-                cmd.Parameters.AddWithValue("@IdProdotto", prd.IdProdotto);
+                
 
                 cmd.ExecuteNonQuery();
 
