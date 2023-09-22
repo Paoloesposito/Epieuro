@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Epieuro.Classi;
 
 namespace Epieuro
 {
@@ -12,31 +13,39 @@ namespace Epieuro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (Request.Cookies[".ASPXAUTH"] != null&& Request.Cookies["userLoged"]!=null)
+            if (!IsPostBack)
+            {
+
+            if (Request.Cookies[".ASPXAUTH"] != null)
             {
 
                 LogoutButton1.Text = "Logout";
-                NomeUtente.Text = $"Benvenuto {Request.Cookies["userLoged"]["username"].ToString()} {Request.Cookies["userLoged"]["cognome"].ToString()}" ;
+                FormsIdentity identity = HttpContext.Current.User.Identity as FormsIdentity;
+                FormsAuthenticationTicket ticket = identity.Ticket;
+                string nome = ticket.Name;
+                User utente = Db.GetUser(nome);
+
+
+                NomeUtente.Text = $"Benvenuto {utente.Nome}" ;
             }
             else
             {
                 LogoutButton1.Text = "Login";
             }
+            }
         }
 
         protected void LogoutButton1_Click(object sender, EventArgs e)
         {
-            if(Request.Cookies[".ASPXAUTH"] != null && Request.Cookies["userLoged"] != null)
+            HttpCookie userLogedCookie = Request.Cookies[".ASPXAUTH"];
+            if(userLogedCookie != null)
             {
+                FormsAuthentication.SignOut();              
+                userLogedCookie.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(userLogedCookie);
+                Response.Redirect(FormsAuthentication.LoginUrl);
+
                 
-                FormsAuthentication.SignOut();
-
-                HttpCookie login = Request.Cookies["userLoged"];
-
-                login.Expires = DateTime.Now.AddMinutes(-1);
-                Response.Cookies.Add(login);
-                Response.Redirect(FormsAuthentication.DefaultUrl);
             }
             else
             {

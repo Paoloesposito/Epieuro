@@ -28,16 +28,18 @@ namespace Epieuro.Classi
             FotoProfilo = foto;
             Ruolo = ruolo;       
         }
-        public User(int Id, string nome, string cognome, string mail, string password, string foto, string ruolo )
+        public User(int iduser, string nome, string cognome, string mail, string password, string foto, int ruolo, string NomeRuolo)
         {
-            IdUser = Id;
+            IdUser = iduser;
             Nome = nome;
             Cognome = cognome;
             Email = mail;
             Password = password;
             FotoProfilo = foto;
-            nomeRuolo= ruolo;
+            Ruolo = ruolo;
+            nomeRuolo = NomeRuolo;
         }
+
 
     }
 }

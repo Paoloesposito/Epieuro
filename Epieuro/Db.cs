@@ -1,5 +1,6 @@
 ﻿using Epieuro.Classi;
 using Epieuro.UserAuth;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,6 +10,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Security.Principal;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI.WebControls;
 
 
@@ -177,44 +179,44 @@ namespace Epieuro
         {
             try
             {
-                SqlCommand cmd = new SqlCommand($"select * from UTENTE where email = @email", conn);
-                cmd.Parameters.AddWithValue ("email", email);
+                SqlCommand cmd = new SqlCommand("select * from UTENTE INNER JOIN RUOLI ON UTENTE.IdRuolo = RUOLI.IdRuolo WHERE UTENTE.Email = @email", conn);
+                cmd.Parameters.AddWithValue("@email", email);
                 SqlDataReader sqldatareader;
                 conn.Open();
                 sqldatareader = cmd.ExecuteReader();
-               
-                //string nome = "";
-                //string cognome = "";
-                
-                
-                User myUser= new User();
-                while(sqldatareader.Read())
+
+
+                User myUser = new User();
+                while (sqldatareader.Read())
                 {
                     User user = new User(
+                    Convert.ToInt32(sqldatareader["IdUser"]),
                     sqldatareader["Nome"].ToString(),
                     sqldatareader["Cognome"].ToString(),
                     sqldatareader["Email"].ToString(),
                     sqldatareader["Password"].ToString(),
                     sqldatareader["FotoProfilo"].ToString(),
-                    Convert.ToInt32(sqldatareader["IdRuolo"])
-                    
+                    Convert.ToInt32(sqldatareader["IdRuolo"]),
+                    sqldatareader["Ruolo"].ToString()
+
                     );
-                    user.IdUser = Convert.ToInt32(sqldatareader["idUser"]);
+
 
                     myUser = user;
                 }
                 return myUser;
             }
-            catch 
-            { 
+            catch
+            {
                 User failedUser = new User();
                 return failedUser;
             }
-            
-                
-            
+
+
+
             finally { conn.Close(); }
         }
+
 
         public static string PopulateDashboard()
         {
@@ -257,6 +259,24 @@ namespace Epieuro
             }
             conn.Close();
             return htmltext;
+        }
+
+
+        public static bool isAdmin() 
+        {
+            FormsIdentity identity = HttpContext.Current.User.Identity as FormsIdentity;
+            FormsAuthenticationTicket ticket = identity.Ticket;
+            string ruolo = ticket.UserData;
+            if (ruolo != null && ruolo == "admin" ) 
+            { 
+                return true;
+                           
+            }else
+            {
+                return false;
+            }
+
+
         }
 
     }
