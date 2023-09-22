@@ -15,6 +15,7 @@ namespace Epieuro.Classi
         public string FotoProfilo {  get; set; }        
         
         public int Ruolo { get; set; }
+        public string nomeRuolo { get; set; }
         
         public User() { }
 
@@ -27,7 +28,16 @@ namespace Epieuro.Classi
             FotoProfilo = foto;
             Ruolo = ruolo;       
         }
+        public User(int Id, string nome, string cognome, string mail, string password, string foto, string ruolo )
+        {
+            IdUser = Id;
+            Nome = nome;
+            Cognome = cognome;
+            Email = mail;
+            Password = password;
+            FotoProfilo = foto;
+            nomeRuolo= ruolo;
+        }
 
-        
     }
 }
