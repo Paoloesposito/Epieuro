@@ -220,7 +220,14 @@ namespace Epieuro
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select prodotti.IdProdotto as idprodotto, prodotti.Nome as nome, prodotti.Quantita as quantita, BRAND.NomeBrand as brand, prodotti.Prezzo as prezzo, CATEGORIA.Nome as nomeCategoria from prodotti\r\nleft join CATEGORIA on prodotti.IdCategoria = categoria.IdCategoria \r\nleft join BRAND on PRODOTTI.IdBrand = BRAND.IdBrand";
+            cmd.CommandText = "select prodotti.IdProdotto as idprodotto," +
+                " prodotti.Nome as nome," +
+                " prodotti.Quantita as quantita," +
+                " BRAND.NomeBrand as brand," +
+                " prodotti.Prezzo as prezzo," +
+                " CATEGORIA.Nome as nomeCategoria" +
+                " from prodotti\r\nleft join CATEGORIA on prodotti.IdCategoria = categoria.IdCategoria \r\n" +
+                "left join BRAND on PRODOTTI.IdBrand = BRAND.IdBrand";
             SqlDataReader sqlDataReader;
             conn.Open();
             sqlDataReader = cmd.ExecuteReader();
@@ -251,5 +258,6 @@ namespace Epieuro
             conn.Close();
             return htmltext;
         }
+
     }
 }

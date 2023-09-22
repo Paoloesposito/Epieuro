@@ -9,13 +9,16 @@
 	<div class="row">
       <!-- left column -->
       <div class="col-md-3">
-        <div class="text-center">
-            <div style="background-image: url(https://clipart-library.com/images_k/smartphone-png-transparent/smartphone-png-transparent-22.png);max-width: 700px; height: 400px; background-repeat:no-repeat; background-size:contain; background-position:center">
-          <%--<img src="https://clipart-library.com/images_k/smartphone-png-transparent/smartphone-png-transparent-22.png" class="w-100" alt="avatar">--%>
+        <div id="ImmagineProdotto" runat="server" class="text-center">
+            <div style=" height: 300px" >
+                <asp:Image ID="Image1" Height="300" runat="server" />
+                
              </div>
           <h6 >Upload a different photo...</h6>
+            
           
-          <input  type="file" class="form-control mb-4">
+          
+            <asp:FileUpload ID="UploadImage" CssClass="form-control mb-4" runat="server" />
         </div>
       </div>
       
@@ -28,28 +31,28 @@
           <div class="form-group">
             <label class="col-lg-3 offset-md-3 control-label">Nome prodotto:</label>
             <div class="col-lg-8 offset-md-3">
-                <asp:TextBox ID="TextBox1" CssClass="w-100" runat="server" ></asp:TextBox>
+                <asp:TextBox ID="NomeProdotto" CssClass="w-100" runat="server" ></asp:TextBox>
               <%--<input class="form-control" type="text" value="dey-dey">--%>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 offset-md-3 control-label">Descrizione breve:</label>
             <div class="col-lg-8 offset-md-3">
-                <asp:TextBox ID="TextBox2" CssClass="w-100" runat="server"></asp:TextBox>
+                <asp:TextBox ID="DescrizioneBreve" CssClass="w-100" runat="server"></asp:TextBox>
               <%--<input class="form-control" type="text" value="bootdey">--%>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 offset-md-3 control-label">Descrizione lunga:</label>
             <div class="col-lg-8 offset-md-3">
-                <asp:TextBox ID="TextBox3" CssClass="w-100" runat="server"></asp:TextBox>
+                <asp:TextBox ID="DescrizioneLunga" CssClass="w-100" runat="server"></asp:TextBox>
               <%--<input class="form-control" type="text" value="">--%>
             </div>
           </div>
         <div class="form-group">
             <label class="col-lg-3 offset-md-3 control-label">Specifiche prodotto:</label>
             <div class="col-lg-8 offset-md-3">
-                <asp:TextBox ID="TextBox4" CssClass="w-100" runat="server"></asp:TextBox>
+                <asp:TextBox ID="SpecificheProdotto" CssClass="w-100" runat="server"></asp:TextBox>
                 <%--<input class="form-control" type="text" value="">--%>
             </div>
         </div>
@@ -59,7 +62,8 @@
             <div class="form-group">
                 <label class="col-lg-3 offset-md-3 control-label">Quantità:</label>
                 <div class="col-lg-8 offset-md-3">
-                    <input type="number" class="form-control">
+                    <asp:TextBox ID="Quantita" runat="server"></asp:TextBox>
+                    
                 </div>
             </div>
             <div class="w-100 d-flex gap-4 offset-md-3">
