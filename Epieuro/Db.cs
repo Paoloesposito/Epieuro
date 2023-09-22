@@ -281,7 +281,8 @@ namespace Epieuro
                     
                     $"      <td>{categoriaProdotto}</td>\r\n " +
                     $"      <td><a href=\"https://localhost:44326/UserAuth/ModificaArticolo.aspx?id={idProdotto}\">Dettagli</a></td>\r\n " +
-                $"      </tr>";
+                   
+                    $"      </tr>";
                 
             }
             conn.Close();

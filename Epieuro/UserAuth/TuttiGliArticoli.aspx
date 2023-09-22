@@ -20,5 +20,8 @@
             <tbody id="tbody" runat="server">
             </tbody>
         </table>
+        <div class="d-flex justify-content-center">
+        <a class="btn btn-secondary" href="AddArticolo.aspx">Aggiungi Prodotto</a>
+            </div>
     </div>
 </asp:Content>
