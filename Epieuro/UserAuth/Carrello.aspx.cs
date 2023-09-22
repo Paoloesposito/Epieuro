@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Threading;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,7 @@ namespace Epieuro
                     imgCarrello.Visible = false;
                     totale.Text = "€"+CalcolaTotale();
                     totaleModale.Text ="€"+ CalcolaTotale();
+                   
                 }
             }
             if (addCart == null)

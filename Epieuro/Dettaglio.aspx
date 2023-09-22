@@ -45,15 +45,7 @@
                         <div class="form-outline me-1" style="width: 100px;">
                             <input type="number" runat="server" id="quantita" value="1" class="form-control" />
                         </div>
-                        
-                       
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
-                             
-                       
-                       <%-- <button class="btn btn-primary ms-1" type="submit" runat="server" id="addCart" onclick="addCart_Click">
-                            Add to cart
-                            <i class="fas fa-shopping-cart ms-1"></i>
-                        </button>--%>
+                        <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Aggiungi al carrello" OnClick="Button1_Click" />
                     </div>
                 </div>
                 <!--Content-->
