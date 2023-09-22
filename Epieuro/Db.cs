@@ -51,8 +51,34 @@ namespace Epieuro
             conn.Close();
         }
        
-        public static void getCategorie(Repeater myrepeater) 
+        public static List<Brand> getBrand() 
         {
+            SqlCommand cmd = new SqlCommand("select * from Brand", conn);
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            List<Brand> listaBrand = new List<Brand>();
+            sqlDataReader = cmd.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                Brand brand = new Brand(
+                   Convert.ToInt32(sqlDataReader["IdCategoria"]),
+                   sqlDataReader["Nome"].ToString()
+                );
+                listaBrand.Add(brand);
+            }
+
+            conn.Close();
+            return listaBrand;
+
+
+
+        }
+        
+        
+        public static List<Categorie> getCategorie() 
+        {
+
             SqlCommand cmd = new SqlCommand("select * from CATEGORIA", conn);
             SqlDataReader sqlDataReader;
             conn.Open();
@@ -67,10 +93,9 @@ namespace Epieuro
                 );
                 listaCategorie.Add(categoria);
             }
-            myrepeater.DataSource = listaCategorie;
-            myrepeater.DataBind();
-            conn.Close();
-
+            
+                conn.Close();
+            return listaCategorie;
         }
 
         public static void getPrdCategoria (Repeater myrepeater, int IdCategoria) 

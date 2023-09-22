@@ -17,7 +17,11 @@ namespace Epieuro
             if (!IsPostBack)
             {
                  Db.getProdotti(prodotti);
-                Db.getCategorie(Categorie);
+                List<Categorie> cat = Db.getCategorie();
+
+
+                Categorie.DataSource = cat;
+                Categorie.DataBind();
             }
      
         }
