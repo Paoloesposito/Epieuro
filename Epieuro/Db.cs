@@ -3,6 +3,7 @@ using Epieuro.UserAuth;
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -87,7 +88,7 @@ namespace Epieuro
 
             while (sqlDataReader.Read())
             {
-                Categorie categoria = new Categorie (
+                Categorie categoria = new Categorie(
                    Convert.ToInt32(sqlDataReader["IdCategoria"]),
                    sqlDataReader["Nome"].ToString()
                 );
@@ -285,6 +286,7 @@ namespace Epieuro
             conn.Close();
             return htmltext;
         }
+       
 
 
         public static bool isAdmin() 
