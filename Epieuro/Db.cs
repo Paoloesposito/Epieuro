@@ -378,10 +378,10 @@ namespace Epieuro
         {
             try
             {
-                conn.Open();
-                SqlCommand delete = new SqlCommand("DELETE FROM PRODOTTI WHERE IdProdotto =@IdProdotto", conn);
+                SqlCommand delete = new SqlCommand("DELETE FROM PRODOTTI WHERE IdProdotto=@IdProdotto", conn);
                 delete.Parameters.AddWithValue("IdProdotto", prd.IdProdotto);
 
+                conn.Open();
                 delete.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -391,6 +391,17 @@ namespace Epieuro
             finally { conn.Close(); };
         }
        
+        public static User userLog() 
+        {
+            FormsIdentity identity = HttpContext.Current.User.Identity as FormsIdentity;
+            FormsAuthenticationTicket ticket = identity.Ticket;
+            string email = ticket.Name;
+
+            User utente = Db.GetUser(email);
+
+            return utente;
+        } 
+
 
     }
 }

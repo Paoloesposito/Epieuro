@@ -114,6 +114,7 @@
     <Content Include="ContenutiCarosello\Support.png" />
     <Content Include="ImgCarrello\Carrello.png" />
     <Content Include="tuttiGliArticoli.css" />
+    <Content Include="UserAuth\AddArticolo.aspx" />
     <Content Include="UserAuth\Carrello.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -248,6 +249,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classi\Brand.cs" />
+    <Compile Include="UserAuth\AddArticolo.aspx.cs">
+      <DependentUpon>AddArticolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAuth\AddArticolo.aspx.designer.cs">
+      <DependentUpon>AddArticolo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserAuth\Carrello.aspx.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
