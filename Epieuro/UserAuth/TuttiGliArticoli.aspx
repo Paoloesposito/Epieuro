@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
-        <table class="table marginTable">
+        <table class="table table-bordered marginTable">
             <thead class="sfondoHead">
                 <tr>
                     <th class="fw-bold" scope="col">ID</th>
