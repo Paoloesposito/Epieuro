@@ -17,9 +17,14 @@ namespace Epieuro.UserAuth
             List<string> listabrand = new List<string>();
             prodotto = Db.getProdotto(Convert.ToInt32(Request.QueryString["id"]));
             List<Categorie> cat = Db.getCategorie();
+            List<Brand> brand = Db.getBrand();
+
+
             var nomix = cat.Select(elemento => elemento.Nome);
             Cate.DataSource = nomix;
             Cate.DataBind();
+            BrandList.DataSource = brand.Select(elemento => elemento.Name);
+            BrandList.DataBind();
 
 
             Image1.ImageUrl = $"../Prodotti/Telefonia/Immagini/{prodotto.FotoPrincipale}";

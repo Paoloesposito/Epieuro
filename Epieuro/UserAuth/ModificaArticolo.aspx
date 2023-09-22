@@ -89,11 +89,7 @@
                         <%-- Dropdown brand------------ --%>
                                     <asp:DropDownList ID="BrandList" runat="server">
 
-                                        <asp:ListItem>tutti i brand...</asp:ListItem>
-                                        <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem></asp:ListItem>
-                                        <asp:ListItem></asp:ListItem>
+                                       
                                     </asp:DropDownList>
                                 </div>
                             </div>

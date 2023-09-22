@@ -63,8 +63,8 @@ namespace Epieuro
             while (sqlDataReader.Read())
             {
                 Brand brand = new Brand(
-                   Convert.ToInt32(sqlDataReader["IdCategoria"]),
-                   sqlDataReader["Nome"].ToString()
+                   Convert.ToInt32(sqlDataReader["IdBrand"]),
+                   sqlDataReader["NomeBrand"].ToString()
                 );
                 listaBrand.Add(brand);
             }
