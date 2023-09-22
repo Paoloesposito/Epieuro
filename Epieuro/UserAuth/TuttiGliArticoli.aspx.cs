@@ -11,6 +11,18 @@ namespace Epieuro.UserAuth
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           if (!IsPostBack)
+            {
+                bool admin = Db.isAdmin();
+                if (!admin)
+                {
+                    Response.Redirect("../Default.aspx");
+                }
+            }
+            
+            
+            
+            
             tbody.InnerHtml = Db.PopulateDashboard();
         }
     }

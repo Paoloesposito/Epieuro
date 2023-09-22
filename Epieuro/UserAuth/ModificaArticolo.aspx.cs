@@ -16,8 +16,12 @@ namespace Epieuro.UserAuth
 
             if(!IsPostBack)
             {
-
-            Prodotto prodotto = new Prodotto();
+                bool admin = Db.isAdmin();
+                if (!admin)
+                {
+                    Response.Redirect("../Default.aspx");
+                }
+                Prodotto prodotto = new Prodotto();
             List<string> listabrand = new List<string>();
             prodotto = Db.getProdotto(Convert.ToInt32(Request.QueryString["id"]));
             List<Categorie> cat = Db.getCategorie();
@@ -37,6 +41,9 @@ namespace Epieuro.UserAuth
             DescrizioneLunga.Text = prodotto.DescrizioneEstesa;
             SpecificheProdotto.Text = prodotto.Specifiche;
             Quantita.Text= prodotto.quantita.ToString();
+                
+                   
+                
             }
 
           
