@@ -44,16 +44,17 @@ namespace Epieuro
                 if(utente.nomeRuolo == "admin")
                 {
                     // inserire codice redirect su la dashboard
-                    //Response.Redirect(FormsAuthentication.DefaultUrl);
+                    Response.Redirect("UserAuth/Carrello.aspx");
                 }
                 else
                 {
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("UserAuth/Carrello.aspx");
+                    
                 }
             }
             else 
             {
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                Response.Redirect("UserAuth/Carrello.aspx");
             }
                 
                 

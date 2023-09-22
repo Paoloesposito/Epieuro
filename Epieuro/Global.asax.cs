@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -45,14 +46,15 @@ namespace Epieuro
 
                 if (ruolo == "admin")
                 {
-                    //codice per redirect to dashboard
+                    Server.Transfer("UserAuth/Carrello.aspx");
                 }
             
-                else if (ruolo == "user")
+                if(ruolo == "user") 
                 {
-                     Response.Redirect(FormsAuthentication.DefaultUrl);
+                    Response.Redirect("UserAuth/Carrello.aspx");
                 }
             }
+                    
         }
 
 

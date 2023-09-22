@@ -29,7 +29,7 @@ namespace Epieuro.Classi
             FotoProfilo = foto;
             Ruolo = ruolo;       
         }
-        public User(int iduser, string nome, string cognome, string mail, string password, string foto, int ruolo, string nomeRuolo)
+        public User(int iduser, string nome, string cognome, string mail, string password, string foto, int ruolo, string NomeRuolo)
         {
             Nome = nome;
             Cognome = cognome;
@@ -37,6 +37,7 @@ namespace Epieuro.Classi
             Password = password;
             FotoProfilo = foto;
             Ruolo = ruolo;
+            nomeRuolo = NomeRuolo;
         }
 
     }
