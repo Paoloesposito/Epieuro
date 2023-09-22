@@ -53,5 +53,10 @@ namespace Epieuro.UserAuth
         {
             
         }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
