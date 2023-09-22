@@ -30,6 +30,11 @@ namespace Epieuro
                 PrezzoProdotto.InnerText = $"€ {Convert.ToString(selectedPrd.Prezzo)}";
                 Image1.ImageUrl = $"Prodotti/Telefonia/Immagini/{selectedPrd.FotoPrincipale}";
                 specifiche.InnerText = selectedPrd.Specifiche;
+
+                if (Session["crea"] != null)
+                {
+                    Session.Remove("crea");
+                }
             }
             
 

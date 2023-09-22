@@ -64,41 +64,24 @@
                         <label class="col-lg-3 offset-md-3 control-label">Quantità:</label>
                         <div class="col-lg-8 offset-md-3">
                             <asp:TextBox ID="Quantita" runat="server"></asp:TextBox>
+                             <asp:DropDownList ID="BrandList" runat="server">
+
+    
+ </asp:DropDownList>
+                            <asp:DropDownList ID="Cate" runat="server">
+</asp:DropDownList>
 
                         </div>
                     </div>
                     <div class="w-100 d-flex gap-4 offset-md-3">
 
-                        <div class="form-group">
-                            <label class="col-lg-3 offset-md-3 control-label">Categoria:</label>
-                            <div class="col-lg-8 offset-md-3">
-                                <div class="ui-select">
-                                    <asp:DropDownList ID="Cate" runat="server">
-                                    </asp:DropDownList>
+                       
 
-                                </div>
-                            </div>
-                        </div>
+                        <div class="form-group mt-5">
 
-
-                        <div class="form-group">
-                            <label class="col-lg-3 offset-md-3 control-label">Marchio:</label>
-                            <div class="col-lg-8 offset-md-3">
-                                <div class="ui-select">
-
-                        <%-- Dropdown brand------------ --%>
-                                    <asp:DropDownList ID="BrandList" runat="server">
-
-                                       
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                            <div class="col-lg-8 offset-md-3">
-                                <asp:Button ID="SaveButton" CssClass="btn-success" runat="server" Text="Salva" OnClick="SaveButton_Click" />
+                            <div class="col-lg-8  d-flex gap-3">
+                                <asp:Button ID="SaveButton" CssClass="btn btn-primary" runat="server" Text="Salva modifiche" OnClick="SaveButton_Click" />
+                                <asp:Button ID="DeleteButton" CssClass="btn btn-outline-danger" runat="server" OnClick="DeleteButton_Click" Text="Eimina" />
 
                             </div>
                         </div>

@@ -6,11 +6,12 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>EpiEuro</title>
-    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="stile-dettagli.css" rel="stylesheet" />
+    <link href="https://localhost:44326/tuttiGliArticoli.css" rel="stylesheet" />
     <link href="Carrello-Stile.css" rel="stylesheet" />
-    <link href="Style%20Default.css" rel="stylesheet" />--%>
+    <link href="Style%20Default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Font Awesome -->
 <link
@@ -58,7 +59,7 @@
                     <!-- Collapsible wrapper -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                         <!-- Navbar brand -->
-                        <a class="navbar-brand mt-sm-0" href="Default.aspx">
+                        <a class="navbar-brand mt-sm-0" href="../Default.aspx">
                             <svg width="100" height="30" viewBox="0 0 369.89473684210526 105.68981854722603" class="css-1j8o68f">
                                 <defs id="SvgjsDefs1448"></defs><g id="SvgjsG1449" featurekey="HKaMnE-0" transform="matrix(0.9772441714365488,0,0,0.9772441714365488,-1.6957978500628226,11.829959514170042)" fill="#61c0bf"><g xmlns="http://www.w3.org/2000/svg"><path d="M102.125,31.75h-76.18l-3.39-17.25H9.875c-1.1,0-2,0.9-2,2s0.9,2,2,2h9.39l12.96,66h59.65c1.1,0,2-0.9,2-2s-0.9-2-2-2   h-56.35l-1.72-8.75h60.32L102.125,31.75z M33.405,67.75l-6.4-32h70.24l-6.4,32H33.405z"></path>
                                     <circle cx="41.375" cy="91" r="4.5"></circle>

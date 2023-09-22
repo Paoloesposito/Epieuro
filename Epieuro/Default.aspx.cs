@@ -18,10 +18,13 @@ namespace Epieuro
             {
                  Db.getProdotti(prodotti);
                 List<Categorie> cat = Db.getCategorie();
-
-
                 Categorie.DataSource = cat;
                 Categorie.DataBind();
+
+                if (Session["crea"]!= null)
+                {
+                    Session.Remove("crea");
+                }
             }
      
         }

@@ -160,10 +160,11 @@ namespace Epieuro
             conn.Close();
             return MyPrd;   
         }
-        
-        public static void getCarrello(GridView mygridView)
+
+        public static void getProdottiCarrello(Repeater repeatercarrello,List<Prodotto>Carrello)
         {
-            
+            repeatercarrello.DataSource = Carrello;
+            repeatercarrello.DataBind();
         }
 
         public static void AddUser(User user) 

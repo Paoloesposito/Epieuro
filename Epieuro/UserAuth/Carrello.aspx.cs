@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,31 +17,41 @@ namespace Epieuro
         {
             if (!IsPostBack)
             {
+               
                 addCart = Session["carrello"] as List<Prodotto>;
                 if(addCart != null)
                 {
-                    //carrelloBoxVuoto.Visible = false;
-                    carrelloGrid.DataSource = addCart;
-                    carrelloGrid.DataBind();
-                    totaleTesto.Visible = true;
-                    totale.Text = $"Totale: {CalcolaTotale()}";
+                    Db.getProdottiCarrello(prodottiCarrello, addCart);
+                    carrelloBoxVuoto.Visible = false;
+                    imgCarrello.Visible = false;
+                    totale.Text = "€"+CalcolaTotale();
+                    totaleModale.Text ="€"+ CalcolaTotale();
                 }
-              
             }
             if (addCart == null)
             {
-                //carrelloBoxVuoto.Visible = true;
-                //carrelloVuoto.InnerHtml = $"OPS! Il tuo carrello è vuoto! <a id='linkCarrello' href=\"Default.aspx\">Premi qui</a> per tornare nella pagina acquisti";
-                totaleTesto.Visible = false;
+                carrelloBoxVuoto.Visible = true;
+                imgCarrello.Visible = true;
+                //carrelloVuoto.InnerHtml = $"OPS! Il tuo carrello è vuoto!";
+                //totaleTesto.Visible = false;
             }
+            if (Session["crea"] != null)
+            {
+                Acquistato.Visible = true;
+                Acquistato.Text = $"Pagamento Andato A Buon Fine! Grazie Per Averci Scelto";
+            }
+            
+            
+           
         }
+
         protected string CalcolaTotale()
         {
             List<Prodotto>carrelloProdotti = Session["carrello"] as List<Prodotto>;
             if(carrelloProdotti != null)
             {
                 double totale = carrelloProdotti.Sum(p => p.Prezzo * p.quantitaAcquistata);
-                return totale.ToString("C");
+                return totale.ToString();
             }
             return "0.00";
         }
@@ -70,6 +81,13 @@ namespace Epieuro
                     Session["carrello"] = carrelloAggiornato;
                 }
             }
+        }
+
+        protected void CheckOut_Click(object sender, EventArgs e)
+        {
+            Session["crea"] = true;
+            Session.Remove("carrello");
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
