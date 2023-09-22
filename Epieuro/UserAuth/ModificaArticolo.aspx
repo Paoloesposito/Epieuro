@@ -1,76 +1,111 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ModificaArticolo.aspx.cs" Inherits="Epieuro.UserAuth.ModificaArticolo" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container bootstrap snippets bootdey">
-    <h1 class="text-primary">Edit Profile</h1>
-      <hr>
-	<div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
-          <h6>Upload a different photo...</h6>
-          
-          <input type="file" class="form-control">
-        </div>
-      </div>
-      
-      <!-- edit form column -->
-      <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
-          <i class="fa fa-coffee"></i>
-          This is an <strong>.alert</strong>. Use this to show important messages to the user.
-        </div>
-        <h3>Personal info</h3>
-        
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="dey-dey">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="bootdey">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Company:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="janesemail@gmail.com">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Time Zone:</label>
-            <div class="col-lg-8">
-              <div class="ui-select">
-                <select id="user_time_zone" class="form-control">
-                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                  <option value="Alaska">(GMT-09:00) Alaska</option>
-                  <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                  <option value="Arizona">(GMT-07:00) Arizona</option>
-                  <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                  <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                  <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                  <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-  </div>
-</div>
+        <h1 class="text-primary">Edit Profile</h1>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                <div id="ImmagineProdotto" runat="server" class="text-center">
+                    <div style="height: 300px">
+                        <asp:Image ID="Image1" Height="300" runat="server" />
 
+                    </div>
+                    <h6>Upload a different photo...</h6>
+
+
+
+                    <asp:FileUpload ID="UploadImage" CssClass="form-control mb-4" runat="server" />
+                </div>
+            </div>
+
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+
+                <h3 class="offset-md-3">Modifica Prodotto</h3>
+
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-3 offset-md-3 control-label">Nome prodotto:</label>
+                        <div class="col-lg-8 offset-md-3">
+                            <asp:TextBox ID="NomeProdotto" CssClass="w-100" runat="server"></asp:TextBox>
+                            <%--<input class="form-control" type="text" value="dey-dey">--%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 offset-md-3 control-label">Descrizione breve:</label>
+                        <div class="col-lg-8 offset-md-3">
+                            <asp:TextBox ID="DescrizioneBreve" CssClass="w-100" runat="server"></asp:TextBox>
+                            <%--<input class="form-control" type="text" value="bootdey">--%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 offset-md-3 control-label">Descrizione lunga:</label>
+                        <div class="col-lg-8 offset-md-3">
+                            <asp:TextBox ID="DescrizioneLunga" CssClass="w-100" runat="server"></asp:TextBox>
+                            <%--<input class="form-control" type="text" value="">--%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 offset-md-3 control-label">Specifiche prodotto:</label>
+                        <div class="col-lg-8 offset-md-3">
+                            <asp:TextBox ID="SpecificheProdotto" CssClass="w-100" runat="server"></asp:TextBox>
+                            <%--<input class="form-control" type="text" value="">--%>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="col-lg-3 offset-md-3 control-label">Quantità:</label>
+                        <div class="col-lg-8 offset-md-3">
+                            <asp:TextBox ID="Quantita" runat="server"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex gap-4 offset-md-3">
+
+                        <div class="form-group">
+                            <label class="col-lg-3 offset-md-3 control-label">Categoria:</label>
+                            <div class="col-lg-8 offset-md-3">
+                                <div class="ui-select">
+                                    <asp:DropDownList ID="Cate" runat="server">
+                                    </asp:DropDownList>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-lg-3 offset-md-3 control-label">Marchio:</label>
+                            <div class="col-lg-8 offset-md-3">
+                                <div class="ui-select">
+
+                        <%-- Dropdown brand------------ --%>
+                                    <asp:DropDownList ID="BrandList" runat="server">
+
+                                       
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-lg-8 offset-md-3">
+                                <asp:Button ID="SaveButton" CssClass="btn-success" runat="server" Text="Salva" OnClick="SaveButton_Click" />
+
+                            </div>
+                        </div>
+                        <div class="w-100 d-flex gap-4 offset-md-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </asp:Content>
