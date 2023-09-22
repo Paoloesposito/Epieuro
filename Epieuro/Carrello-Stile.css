@@ -16,7 +16,7 @@
     background-color: #FF7B2C;
 }*/
 body {
-    margin-top: 20px;
+    margin-top: 80px;
     background: #eee;
 }
 
@@ -30,7 +30,6 @@ h3 {
 
 .cart-product-imitation {
     text-align: center;
-    padding-top: 30px;
     height: 80px;
     width: 80px;
     background-color: #f8f8f9;
@@ -127,4 +126,28 @@ table.shoping-cart-table {
     font-size: 90%;
     background: #ffffff;
     padding: 10px 15px;
+}
+.boxCarrelloRepeater{
+    justify-content:end;
+    
+}
+.Interested{
+    overflow-y: scroll;
+    height: 500px;
+}
+.Interested::-webkit-scrollbar {
+    width: 0;
+}
+.payment-icons{
+    list-style-type: none !important;
+    display:flex;
+    justify-content:center;
+    background-color: #eee;
+    padding:5px;
+}
+.payment-icon{
+    margin-right:10px;
+}
+.backGroundTotale{
+    background-color: #eee;
 }

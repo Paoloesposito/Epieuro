@@ -1,438 +1,224 @@
 ﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="Epieuro.Carrello" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Carrello-Stile.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:GridView ID="carrelloGrid" CssClass="table table-bordered bg-light" AutoGenerateColumns="false" ItemType="Epieuro.Classi.Prodotto" runat="server">
-        <Columns>
-            <asp:TemplateField>
-                <HeaderTemplate>
-                    <strong id="tabellaHeader">Prodotto</strong>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <%# Item.Nome %>
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-        <Columns>
-            <asp:TemplateField>
-                <HeaderTemplate>
-                    <strong id="tabellaHeader">Descrizione Breve</strong>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <%# Item.DescrizioneBreve %>
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-        <Columns>
-            <asp:TemplateField>
-                <HeaderTemplate>
-                    <strong id="tabellaHeader">Quantità</strong>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <%# Item.quantitaAcquistata %>
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-        <Columns>
-            <asp:TemplateField>
-                <HeaderTemplate>
-                    <strong id="tabellaHeader">Prezzo</strong>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <%# Item.Prezzo %>
-                    <div>
-                       
-                    </div>
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
-    <div id="totaleTesto" runat="server" class="d-flex justify-content-between me-2">
-        
-       
-    </div>
-    <%--<div class="d-flex align-items-center mt-5" id="carrelloBoxVuoto" runat="server">
-        <img id="imgCarrelloVuoto" src="ImgCarrello/carrelloVuoto.png" />
-        <h1 id="carrelloVuoto" class="textCarrelloVuoto" runat="server"></h1>
-    </div>--%>
-
-    <%-- CIAO*************************************************************************** --%>
-    <%--<div class="d-flex justify-content-between">
-        <div id="checkout" class="w-lg-100  ">
-            <main class="mt-5 pt-4">
-    <div class="container-fluid">
-        <!-- Heading -->
-        <h2 class="my-5 text-center">Checkout form</h2>
-
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col col-12 col-md-8 mb-4">
-                <!--Card-->
-                <div class="card p-4">
-                    <!--Grid row-->
-                    <div class="row mb-3">
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-2">
-                            <!--firstName-->
-                            <div class="form-outline">
-                                <input type="text" id="typeText" class="form-control" />
-                                <label class="form-label" for="typeText">First name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-md-6 mb-2">
-                            <!--lastName-->
-                            <div class="form-outline">
-                                <input type="text" id="typeText" class="form-control" />
-                                <label class="form-label" for="typeText">Last name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Username-->
-                    <div class="input-group mb-4">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-                    </div>
-
-                    <!--email-->
-                    <p class="mb-0">
-                        Email (optional)
-                    </p>
-                    <div class="form-outline mb-4">
-                         <input type="email" class="form-control" placeholder="youremail@example.com" aria-label="youremail@example.com" aria-describedby="basic-addon1" />
-                    </div>
-
-                    <!--address-->
-                    <p class="mb-0">
-                        Address
-                    </p>
-                    <div class="form-outline mb-4">
-                        <input type="email" class="form-control" placeholder="1234 Main St" aria-label="1234 Main St" aria-describedby="basic-addon1" />
-                    </div>
-
-                    <!--address-2-->
-                    <p class="mb-0">
-                        Address 2 (optional)
-                    </p>
-                    <div class="form-outline mb-4">
-                        <input type="email" class="form-control" placeholder="Apartment or suite" aria-label="Apartment or suite" aria-describedby="basic-addon1" />
-                    </div>
-
-                    <!--Grid row-->
-                    <div class="row">
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-                            <p class="mb-0">
-                                Country
-                            </p>
-                            <div class="form-outline mb-4">
-                        <input type="email" class="form-control" placeholder="United States" aria-label="United States" aria-describedby="basic-addon1" />
-                    </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-                            <p class="mb-0">
-                                State
-                            </p>
-                            <div class="form-outline mb-4">
-                        <input type="email" class="form-control" placeholder="California" aria-label="California" aria-describedby="basic-addon1" />
-                    </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-                            <p class="mb-0">
-                                Zip
-                            </p>
-                            <div class="form-outline">
-                                <input type="text" class="form-control"/>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-
-                    <hr />
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <label class="form-check-label" for="flexCheckDefault">Shipping address is the same as my billing address</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                        <label class="form-check-label" for="flexCheckDefault">Save this information for next time</label>
-                    </div>
-
-                    <hr />
-
-                    <div class="my-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
-                            <label class="form-check-label" for="flexRadioDefault1"> Credit card </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                            <label class="form-check-label" for="flexRadioDefault2"> Debit card </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
-                            <label class="form-check-label" for="flexRadioDefault3"> Paypal </label>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6 mb-3">
-                            <p class="mb-0">
-                                Name on card
-                            </p>
-                            <div class="form-outline">
-                                <input type="text" class="form-control"/>
-                                <div class="form-helper">Full name as displayed on card</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <p class="mb-0">
-                                Credit card number
-                            </p>
-                            <div class="form-outline">
-                                <input type="text" class="form-control" />                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <p class="mb-0">
-                                Expiration
-                            </p>
-                            <div class="form-outline">
-                                <input type="text" class="form-control" />
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <p class="mb-0">
-                                CVV
-                            </p>
-                            <div class="form-outline">
-                                <input type="text" class="form-control" />
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="mb-4" />                    
-                  <button class="btn btn-primary" type="button">Continue to checkout</button>
-                </div>
-                <!--/.Card-->
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col col-12 col-md-4 mb-4">
-                <!-- Heading -->
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Your cart</span>
-                    <span class="badge rounded-pill badge-primary">3</span>
-                </h4>
-
-                <!-- Cart -->
-                <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$8</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$5</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
-                        </div>
-                        <span class="text-success">-$5</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
-                    </li>
-                </ul>
-                <!-- Cart -->
-
-                <!-- Promo code -->
-                <form class="card p-2">
-                    <div class="input-group mb-3">
-  <input
-    type="text"
-    class="form-control"
-    placeholder="Promo code"
-    aria-label="Promo code"
-    aria-describedby="button-addon2"
-  />
-  <button class="btn btn-primary" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-    redeem
-  </button>
-</div>
-                </form>
-                <!-- Promo code -->
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-</main>
-        </div>
-        <div id="articoli"  style="width:300px" class="d-none d-lg-block">
-                     <div class=" g-4 d-flex flex-column md-3 align-items-center  pt-5   ">
-                <div class="pe-5 pt-5 mt-5 text-center">
-    <h3>Potrebbe piacerti anche</h3>
-</div>
-             <div class="col w-100 me-5 ">
-                 <div class="card h-100 ">
-                     <img src="https://photo.yeppon.it/msi-notebook-gaming-stealth/10-108957210_3818074107.jpg?tr=w-750,c-at_max:w-750,cm-pad_extract,bg-FFFFFF" class="card-img-top" alt="articoli consigliati">
-                     <div class="card-body">
-                         <h5 class="card-title">Card title</h5>
-                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                     </div>
-                     <div class="card-footer">
-                         <small class="text-body-secondary">Last updated 3 mins ago</small>
-                     </div>
-                 </div>
-             </div>
-           <div class="col w-100 me-5 ">
-                 <div class="card h-100">
-                     <img src="https://photo.yeppon.it/msi-notebook-gaming-stealth/10-108957210_3818074107.jpg?tr=w-750,c-at_max:w-750,cm-pad_extract,bg-FFFFFF" class="card-img-top" alt="...">
-                     <div class="card-body">
-                         <h5 class="card-title">Card title</h5>
-                         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                     </div>
-                     <div class="card-footer">
-                         <small class="text-body-secondary">Last updated 3 mins ago</small>
-                     </div>
-                 </div>
-             </div>
-          <div class="col w-100 me-5 ">
-                 <div class="card h-100">
-                     <img src="https://photo.yeppon.it/msi-notebook-gaming-stealth/10-108957210_3818074107.jpg?tr=w-750,c-at_max:w-750,cm-pad_extract,bg-FFFFFF" class="card-img-top" alt="...">
-                     <div class="card-body">
-                         <h5 class="card-title">Card title</h5>
-                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                     </div>
-                     </div>
-                     </div>
-                     <div class="card-footer">
-                         <small class="text-body-secondary">Last updated 3 mins ago</small>
-                     </div>
-                 </div>
-        </div>
-    </div>--%>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="container">
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <asp:Repeater ID="Repeater1" runat="server" ItemType="Epieuro.Classi.Prodotto">
-                    <ItemTemplate>
                 <div class="col-md-9">
                     <div class="ibox">
                         <div class="ibox-title">
-                            <span class="pull-right">(<strong>5</strong>) items</span>
-                            <h5>Items in your cart</h5>
+                            <span class="pull-right">Prodotti</span>
+                            <h5>Carrello</h5>
                         </div>
-                        <div class="ibox-content">
-                            <div class="table-responsive">
-                                <table class="table shoping-cart-table">
-                                    <tbody>
-                                        <tr>
-                                            <td width="90">
-                                                <div class="cart-product-imitation">
-                                                </div>
-                                            </td>
-                                            <td class="desc">
-                                                <h3>
-                                                    <a href="#" class="text-navy"><%# Item.Nome %>
-                                                    </a>
-                                                </h3>
-                                                <p class="small">
-                                                <%# Item.DescrizioneBreve %>
-                                                </p>
-                                                <dl class="small m-b-none">
-                                                    <dt>Description lists</dt>
-                                                    <dd>A description list is perfect for defining terms.</dd>
-                                                </dl>
+                        <asp:Repeater ID="prodottiCarrello" runat="server" ItemType="Epieuro.Classi.Prodotto">
+                            <ItemTemplate>
+                                <div class="ibox-content">
+                                    <div class="table-responsive">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="90">
+                                                        <div class="cart-product-imitation">
+                                                            <img class="w-100" src="../Prodotti/Telefonia/Immagini/<%# Item.FotoPrincipale %>" />
+                                                        </div>
+                                                    </td>
+                                                    <td class="desc">
+                                                        <h3>
+                                                            <a href="#" class="text-navy"><%# Item.Nome %>
+                                                            </a>
+                                                        </h3>
 
-                                                <div class="m-t-sm">
-                                                    <a href="Dettaglio.aspx" class="text-muted"><i class="fa fa-gift"></i>Details</a>
-                                                    |
-                                                     <asp:Button ID="Elimina" runat="server" CssClass="btn btn-outline-danger" Text="Button" CommandArgument="<%# Item.IdProdotto %>" OnClick="Elimina_Click" />
-                                      <i class="fa fa-trash"></i>Remove item
-                                                </div>
-                                            </td>
+                                                        <dl class="small m-b-none">
+                                                            <dt>Description</dt>
+                                                            <dd><%# Item.DescrizioneBreve %></dd>
+                                                        </dl>
 
-                                            <td><%# Item.Prezzo %>
-                                    <s class="small text-muted">$230,00</s>
-                                            </td>
-                                            <td width="65">
-                                                <input type="text" class="form-control" placeholder="<%# Item.quantitaAcquistata %>">
-                                            </td>
-                                            <td>
-                                                <h4><%# Item.Prezzo %>
-                                                </h4>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                        <div class="m-t-sm">
+                                                            |<i class="fa fa-trash text-danger"></i><asp:Button ID="Elimina" CssClass="btn btn-white btn-sm" runat="server" Text="Rimuovi" OnClick="Elimina_Click" CommandArgument="<%# Item.IdProdotto %>" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td><%# "€"+Item.Prezzo %>
+                                                        <%--  <s class="small text-muted">€230,00</s>--%>
+                                                    </td>
+                                                    <td width="65">
+                                                        <input type="text" class="form-control" placeholder="1">
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            <%# "€"+Item.Prezzo %>
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
                             </ItemTemplate>
-                            </asp:Repeater>
-                        </div>
-                        <div class="ibox-content">
-                            <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i>Checkout</button>
-                            <button class="btn btn-white"><i class="fa fa-arrow-left"></i>Continue shopping</button>
+                        </asp:Repeater>
 
+
+
+                        <div class="ibox-content">
+
+
+                            <a class="btn btn-white" href="../Default.aspx"><i class="fa fa-arrow-left"></i>CONTINUA SHOPPING</a>
                         </div>
+                    </div>
+                    <div>
+                        <asp:Label ID="Acquistato" CssClass="alert alert-success mb-5" runat="server" Text="">
+                        </asp:Label>
+                    </div>
+                    <div class="d-flex justify-content-center" id="carrelloBoxVuoto" runat="server">
+                        <img id="imgCarrello" class="w-50" src="../ImgCarrello/Carrello.png" runat="server" />
                     </div>
 
                 </div>
                 <div class="col-md-3">
                     <div class="ibox">
                         <div class="ibox-title">
-                            <h5>Cart Summary</h5>
+                            <h5>Riepilogo Carrello</h5>
                         </div>
-                        <div class="ibox-content">
-                            <span>Total
-                            </span>
-                             <asp:Label ID="totale" CssClass="fw-bold text-white" runat="server" Text="Label"></asp:Label>
 
+                        <div class="ibox-content">
+                            <p>
+                                Totale
+                            </p>
+                            <%-- <h2 id="totale" runat="server" class="font-bold">
+                            </h2>--%>
+                            <asp:Label ID="totale" CssClass="fw-bold fs-2" runat="server" Text=""></asp:Label>
                             <hr>
                             <span class="text-muted small">*For United States, France and Germany applicable sales tax will be applied
                             </span>
                             <div class="m-t-sm">
                                 <div class="btn-group">
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i>Checkout</a>
-                                    <asp:Button ID="ButtonSvuotaCarrello" CssClass="custom-btn" runat="server" Text="Svuota Carrello" OnClick="ButtonSvuotaCarrello_Click" />
+                                    <button onclick="creaSession"
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-mdb-toggle="modal"
+                                        data-mdb-target="#exampleModal"
+                                        data-mdb-whatever="@getbootstrap">
+                                        <i class="fa fa fa-shopping-cart"></i>Checkout
+                                    </button>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-dark">
+                                                    <svg width="100" height="30" viewBox="0 0 369.89473684210526 105.68981854722603" class="css-1j8o68f">
+                                                        <defs id="SvgjsDefs1448"></defs><g id="SvgjsG1449" featurekey="HKaMnE-0" transform="matrix(0.9772441714365488,0,0,0.9772441714365488,-1.6957978500628226,11.829959514170042)" fill="#61c0bf"><g xmlns="http://www.w3.org/2000/svg"><path d="M102.125,31.75h-76.18l-3.39-17.25H9.875c-1.1,0-2,0.9-2,2s0.9,2,2,2h9.39l12.96,66h59.65c1.1,0,2-0.9,2-2s-0.9-2-2-2   h-56.35l-1.72-8.75h60.32L102.125,31.75z M33.405,67.75l-6.4-32h70.24l-6.4,32H33.405z"></path>
+                                                            <circle cx="41.375" cy="91" r="4.5"></circle>
+                                                            <circle cx="84.375" cy="91" r="4.5"></circle>
+                                                            <path d="M68.612,61.471c-1.568,0.606-3.441,0.909-5.619,0.909c-2.261,0-4.268-0.362-6.022-1.087s-3.117-1.876-4.088-3.452   c-0.971-1.577-1.456-3.327-1.456-5.25c0-1.978,0.435-3.88,1.306-5.708c0.87-1.827,2.165-3.245,3.883-4.252   c1.718-1.007,3.812-1.511,6.282-1.511c2.907,0,5.172,0.754,6.795,2.263c1.622,1.509,2.434,3.384,2.434,5.626   c0,1.249-0.287,2.457-0.861,3.623c-0.574,1.167-1.326,2.097-2.256,2.789c-0.693,0.528-1.258,0.793-1.695,0.793   c-0.146,0-0.271-0.057-0.376-0.171c-0.104-0.113-0.157-0.285-0.157-0.513c0-0.183,0.063-0.583,0.191-1.203l2.064-9.803h-3.609   l-0.342,1.518c-0.775-1.239-1.974-1.859-3.596-1.859c-2.279,0-4.147,1.076-5.605,3.227c-1.203,1.769-1.805,3.724-1.805,5.865   c0,1.731,0.499,3.12,1.497,4.163c0.998,1.044,2.253,1.565,3.767,1.565c1.403,0,2.643-0.52,3.719-1.559   c0.127,0.511,0.383,0.898,0.766,1.162c0.383,0.265,0.952,0.396,1.709,0.396c2.807,0,5.108-1.185,6.904-3.555   c1.431-1.878,2.146-3.979,2.146-6.303c0-1.95-0.472-3.748-1.415-5.394c-0.943-1.645-2.309-2.914-4.095-3.808   c-1.787-0.893-3.828-1.34-6.125-1.34c-2.707,0-5.113,0.554-7.219,1.661s-3.765,2.767-4.977,4.977   c-1.212,2.21-1.818,4.596-1.818,7.157c0,2.333,0.533,4.491,1.6,6.474s2.693,3.481,4.881,4.498s4.785,1.524,7.793,1.524   c3.107,0,5.742-0.602,7.902-1.805c1.887-1.049,3.285-2.498,4.197-4.348h-2.912C71.442,59.955,70.18,60.864,68.612,61.471z    M63.807,52.823c-0.351,1.066-0.769,1.878-1.251,2.434c-0.338,0.392-0.68,0.679-1.025,0.861c-0.456,0.255-0.943,0.383-1.463,0.383   c-0.693,0-1.273-0.273-1.743-0.82s-0.704-1.399-0.704-2.557c0-0.866,0.168-1.859,0.506-2.98c0.337-1.121,0.838-1.984,1.504-2.591   c0.665-0.606,1.39-0.909,2.174-0.909c0.729,0,1.333,0.276,1.812,0.827c0.479,0.552,0.718,1.342,0.718,2.372   C64.333,50.764,64.157,51.757,63.807,52.823z"></path>
+                                                        </g>
+                                                        </g><g id="SvgjsG1450" featurekey="J3GnXt-0" transform="matrix(3.815010986144231,0,0,3.815010986144231,108.94799002864427,7.8729391909858535)" fill="#fae3d9"><path d="M5.7 10.28 c1.4533 0 2.5834 0.45664 3.39 1.37 s1.2167 2.17 1.23 3.77 l0 0.5 l-7.6 0 c0 0.77334 0.31 1.4233 0.93 1.95 s1.3767 0.79666 2.27 0.81 c0.98666 0 1.8533 -0.47334 2.6 -1.42 l1.36 1.04 c-1.0133 1.2933 -2.4134 1.94 -4.2 1.94 c-1.4533 0 -2.6234 -0.46334 -3.51 -1.39 s-1.3433 -2.1234 -1.37 -3.59 c0 -1.4133 0.45666 -2.59 1.37 -3.53 s2.09 -1.4233 3.53 -1.45 z M8.4 14.48 c-0.02666 -0.89334 -0.28 -1.5767 -0.76 -2.05 s-1.14 -0.71 -1.98 -0.71 c-0.56 0 -1.0633 0.13666 -1.51 0.41 s-0.79666 0.62668 -1.05 1.06 s-0.38 0.86334 -0.38 1.29 l5.68 0 z M17.64 10.28 c1.4 0 2.5434 0.45998 3.43 1.38 s1.3433 2.12 1.37 3.6 c0 1.48 -0.45334 2.6766 -1.36 3.59 s-2.06 1.3767 -3.46 1.39 c-0.69334 0 -1.34 -0.14666 -1.94 -0.44 s-1.0533 -0.68 -1.36 -1.16 l-0.04 0 l0 7 l-1.8 0 l0 -15.12 l1.8 0 l0 1.36 l0.04 0 c0.36 -0.50666 0.83334 -0.9 1.42 -1.18 s1.22 -0.42 1.9 -0.42 z M14.280000000000001 15.26 c0 0.98666 0.28998 1.7833 0.86998 2.39 s1.33 0.91 2.25 0.91 c0.96 0 1.7167 -0.30334 2.27 -0.91 s0.83668 -1.4033 0.85002 -2.39 c0 -0.98666 -0.28334 -1.78 -0.85 -2.38 s-1.33 -0.90666 -2.29 -0.92 c-0.94666 0 -1.7 0.31 -2.26 0.93 s-0.84 1.41 -0.84 2.37 z M25.740000000000002 5.800000000000001 c0.36 0 0.67002 0.13002 0.93002 0.39002 s0.39 0.57 0.39 0.93 c0 0.37334 -0.13334 0.68668 -0.4 0.94002 s-0.57332 0.38 -0.91998 0.38 c-0.37334 0 -0.68668 -0.12666 -0.94002 -0.38 s-0.38 -0.56668 -0.38 -0.94002 s0.13334 -0.68668 0.4 -0.94002 s0.57332 -0.38 0.91998 -0.38 z M26.640000000000004 10.52 l0 9.48 l-1.8 0 l0 -9.48 l1.8 0 z M33.84 10.28 c1.4533 0 2.5834 0.45664 3.39 1.37 s1.2167 2.17 1.23 3.77 l0 0.5 l-7.6 0 c0 0.77334 0.31 1.4233 0.93 1.95 s1.3767 0.79666 2.27 0.81 c0.98666 0 1.8533 -0.47334 2.6 -1.42 l1.36 1.04 c-1.0133 1.2933 -2.4134 1.94 -4.2 1.94 c-1.4533 0 -2.6234 -0.46334 -3.51 -1.39 s-1.3433 -2.1234 -1.37 -3.59 c0 -1.4133 0.45666 -2.59 1.37 -3.53 s2.09 -1.4233 3.53 -1.45 z M36.540000000000006 14.48 c-0.02666 -0.89334 -0.28 -1.5767 -0.76 -2.05 s-1.14 -0.71 -1.98 -0.71 c-0.56 0 -1.0633 0.13666 -1.51 0.41 s-0.79666 0.62668 -1.05 1.06 s-0.38 0.86334 -0.38 1.29 l5.68 0 z M42.42 10.52 l0 5.68 c0 0.74666 0.19666 1.3267 0.59 1.74 s0.91668 0.62 1.57 0.62 c0.84 0 1.49 -0.27666 1.95 -0.83 s0.69 -1.3033 0.69 -2.25 l0 -4.96 l1.8 0 l0 9.48 l-1.8 0 l0 -1.46 l-0.04 0 c-0.25334 0.53334 -0.66668 0.95 -1.24 1.25 s-1.2 0.45 -1.88 0.45 c-1.0533 0 -1.89 -0.32666 -2.51 -0.98 s-0.93 -1.5067 -0.93 -2.56 l0 -6.18 l1.8 0 z M56.42000000000001 10.28 c0.33334 0 0.6 0.04 0.8 0.12 l-0.08 1.94 c-0.34666 -0.09334 -0.64666 -0.14 -0.9 -0.14 c-1.7733 0 -2.6734 0.98666 -2.7 2.96 l0 4.84 l-1.8 0 l0 -9.48 l1.8 0 l0 1.46 l0.04 0 c0.24 -0.50666 0.62666 -0.91666 1.16 -1.23 s1.0933 -0.47 1.68 -0.47 z M63.36000000000001 10.28 c1.4 0 2.5866 0.48338 3.56 1.45 s1.4667 2.1434 1.48 3.53 c0 1.4 -0.48666 2.5734 -1.46 3.52 s-2.1666 1.4333 -3.58 1.46 c-1.3867 0 -2.5666 -0.48 -3.54 -1.44 s-1.4733 -2.14 -1.5 -3.54 c0 -1.3733 0.48334 -2.54 1.45 -3.5 s2.1634 -1.4533 3.59 -1.48 z M60.24000000000001 15.26 c0 0.97334 0.28664 1.7633 0.85998 2.37 s1.3267 0.91666 2.26 0.93 c0.94666 0 1.7 -0.30334 2.26 -0.91 s0.84666 -1.4033 0.86 -2.39 c0 -0.97334 -0.28 -1.7633 -0.84 -2.37 s-1.3267 -0.91666 -2.3 -0.93 c-0.94666 0 -1.7 0.31334 -2.26 0.94 s-0.84 1.4133 -0.84 2.36 z"></path>
+                                                        </g></svg>
+                                                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4 class="fw-bold mb-0">Metodo di Pagamento</h4>
+                                                    <small class="mb-0">Tutte le transazioni sono protette e sicure</small>
+                                                    <hr />
+                                                    <div class="mb-3">
+                                                        <h6 class="fw-bold mb-2">Credit/Debit Card (più utilizzate)</h6>
+                                                        <small class="mb-3">Potresti essere reindirizzato al procedimento 3D Secure della tua banca per l'autenticazione dei tuoi dati</small>
+                                                        <input class="form-control mt-5" type="text" placeholder="NUMERO CARTA*" />
+                                                        <input class="form-control mt-5" type="text" placeholder="INTESTATARIO CARTA*" />
+                                                        <div class="d-flex justify-content-between">
+                                                            <input class="form-control me-2 mt-5" type="text" placeholder="MM/AA*" />
+                                                            <input class="form-control mt-5" type="text" placeholder="CVV*" />
+
+                                                        </div>
+                                                        <small>Data di scadenza della carta</small>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <ul class="payment-icons">
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-american_express">
+                                                                    <title id="pi-american_express">American Express</title>
+                                                                    <g fill="none">
+                                                                        <path fill="#000" d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z" opacity=".07"></path>
+                                                                        <path fill="#006FCF" d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"></path>
+                                                                        <path fill="#FFF" d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"></path>
+                                                                    </g></svg>
+
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" x="0" y="0" width="38" height="24" viewBox="0 0 165.521 105.965" xml:space="preserve" aria-labelledby="pi-apple_pay">
+                                                                    <title id="pi-apple_pay">Apple Pay</title>
+                                                                    <path fill="#000" d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path><path fill="#FFF" d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"></path><g><g><path fill="#000" d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"></path>
+                                                                        <path fill="#000" d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"></path>
+                                                                    </g>
+                                                                        <g>
+                                                                            <path fill="#000" d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"></path>
+                                                                            <path fill="#000" d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"></path>
+                                                                            <path fill="#000" d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"></path>
+                                                                        </g>
+                                                                    </g></svg>
+
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-google_pay">
+                                                                    <title id="pi-google_pay">Google Pay</title>
+                                                                    <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"></path><path d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z" fill="#5F6368"></path><path d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z" fill="#4285F4"></path><path d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z" fill="#34A853"></path><path d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z" fill="#FBBC04"></path><path d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z" fill="#EA4335"></path></svg>
+
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-maestro">
+                                                                    <title id="pi-maestro">Maestro</title>
+                                                                    <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#00A2E5" cx="23" cy="12" r="7"></circle><path fill="#7375CF" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg>
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master">
+                                                                    <title id="pi-master">Mastercard</title>
+                                                                    <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#F79E1B" cx="23" cy="12" r="7"></circle><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg>
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-shopify_pay">
+                                                                    <title id="pi-shopify_pay">Shop Pay</title>
+                                                                    <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#5A31F4"></path><path d="M21.382 9.713c0 1.668-1.177 2.858-2.821 2.858h-1.549a.133.133 0 00-.12.08.127.127 0 00-.01.049v2.192a.129.129 0 01-.13.129h-1.084a.13.13 0 01-.13-.13V6.986a.127.127 0 01.08-.12.129.129 0 01.05-.01h2.9c1.637 0 2.814 1.19 2.814 2.858v-.001zm-1.352 0c0-.958-.658-1.658-1.55-1.658h-1.468a.13.13 0 00-.13.13v3.05a.127.127 0 00.038.092.129.129 0 00.092.038h1.468c.892.005 1.55-.695 1.55-1.652zm1.674 3.791a1.527 1.527 0 01.647-1.317c.423-.316 1.084-.48 2.055-.514l1.033-.036v-.303c0-.607-.41-.863-1.068-.863-.658 0-1.075.231-1.17.61a.127.127 0 01-.125.09h-1.022a.13.13 0 01-.126-.092.125.125 0 01-.004-.055c.152-.898.904-1.58 2.494-1.58 1.692 0 2.303.783 2.303 2.276v3.172a.13.13 0 01-.132.129h-1.03a.13.13 0 01-.13-.13v-.236a.096.096 0 00-.061-.091.1.1 0 00-.107.022c-.31.334-.808.575-1.607.575-1.175 0-1.95-.607-1.95-1.657zm3.735-.687v-.246l-1.339.07c-.705.036-1.115.326-1.115.816 0 .444.376.69 1.034.69.893 0 1.42-.48 1.42-1.33zm2.316 4.6v-.919a.13.13 0 01.049-.1.132.132 0 01.108-.027c.158.029.318.044.479.044a1.229 1.229 0 001.245-.876l.067-.211a.133.133 0 000-.088l-2.145-5.471a.13.13 0 01.06-.165.13.13 0 01.062-.015h1.04a.132.132 0 01.123.085l1.456 3.859a.131.131 0 00.125.088.133.133 0 00.125-.088l1.265-3.848a.13.13 0 01.126-.09h1.076a.134.134 0 01.132.116.134.134 0 01-.008.063l-2.295 6.076c-.528 1.413-1.433 1.773-2.43 1.773a1.959 1.959 0 01-.561-.066.132.132 0 01-.1-.14h.001zM8.57 6.4a5.363 5.363 0 00-3.683 1.427.231.231 0 00-.029.31l.618.839a.236.236 0 00.362.028 3.823 3.823 0 012.738-1.11c2.12 0 3.227 1.584 3.227 3.15 0 1.7-1.163 2.898-2.835 2.921-1.292 0-2.266-.85-2.266-1.974a1.908 1.908 0 01.713-1.48.231.231 0 00.033-.324l-.65-.815a.236.236 0 00-.339-.034 3.43 3.43 0 00-.942 1.183 3.39 3.39 0 00-.337 1.47c0 1.935 1.655 3.452 3.775 3.464h.03c2.517-.032 4.337-1.884 4.337-4.415 0-2.247-1.667-4.64-4.752-4.64z" fill="#fff"></path></svg>
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" viewBox="-36 25 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-unionpay">
+                                                                    <title id="pi-unionpay">Union Pay</title>
+                                                                    <path fill="#005B9A" d="M-36 46.8v.7-.7zM-18.3 25v24h-7.2c-1.3 0-2.1-1-1.8-2.3l4.4-19.4c.3-1.3 1.9-2.3 3.2-2.3h1.4zm12.6 0c-1.3 0-2.9 1-3.2 2.3l-4.5 19.4c-.3 1.3.5 2.3 1.8 2.3h-4.9V25h10.8z"></path><path fill="#E9292D" d="M-19.7 25c-1.3 0-2.9 1.1-3.2 2.3l-4.4 19.4c-.3 1.3.5 2.3 1.8 2.3h-8.9c-.8 0-1.5-.6-1.5-1.4v-21c0-.8.7-1.6 1.5-1.6h14.7z"></path><path fill="#0E73B9" d="M-5.7 25c-1.3 0-2.9 1.1-3.2 2.3l-4.4 19.4c-.3 1.3.5 2.3 1.8 2.3H-26h.5c-1.3 0-2.1-1-1.8-2.3l4.4-19.4c.3-1.3 1.9-2.3 3.2-2.3h14z"></path><path fill="#059DA4" d="M2 26.6v21c0 .8-.6 1.4-1.5 1.4h-12.1c-1.3 0-2.1-1.1-1.8-2.3l4.5-19.4C-8.6 26-7 25-5.7 25H.5c.9 0 1.5.7 1.5 1.6z"></path><path fill="#fff" d="M-21.122 38.645h.14c.14 0 .28-.07.28-.14l.42-.63h1.19l-.21.35h1.4l-.21.63h-1.68c-.21.28-.42.42-.7.42h-.84l.21-.63m-.21.91h3.01l-.21.7h-1.19l-.21.7h1.19l-.21.7h-1.19l-.28 1.05c-.07.14 0 .28.28.21h.98l-.21.7h-1.89c-.35 0-.49-.21-.35-.63l.35-1.33h-.77l.21-.7h.77l.21-.7h-.7l.21-.7zm4.83-1.75v.42s.56-.42 1.12-.42h1.96l-.77 2.66c-.07.28-.35.49-.77.49h-2.24l-.49 1.89c0 .07 0 .14.14.14h.42l-.14.56h-1.12c-.42 0-.56-.14-.49-.35l1.47-5.39h.91zm1.68.77h-1.75l-.21.7s.28-.21.77-.21h1.05l.14-.49zm-.63 1.68c.14 0 .21 0 .21-.14l.14-.35h-1.75l-.14.56 1.54-.07zm-1.19.84h.98v.42h.28c.14 0 .21-.07.21-.14l.07-.28h.84l-.14.49c-.07.35-.35.49-.77.56h-.56v.77c0 .14.07.21.35.21h.49l-.14.56h-1.19c-.35 0-.49-.14-.49-.49l.07-2.1zm4.2-2.45l.21-.84h1.19l-.07.28s.56-.28 1.05-.28h1.47l-.21.84h-.21l-1.12 3.85h.21l-.21.77h-.21l-.07.35h-1.19l.07-.35h-2.17l.21-.77h.21l1.12-3.85h-.28m1.26 0l-.28 1.05s.49-.21.91-.28c.07-.35.21-.77.21-.77h-.84zm-.49 1.54l-.28 1.12s.56-.28.98-.28c.14-.42.21-.77.21-.77l-.91-.07zm.21 2.31l.21-.77h-.84l-.21.77h.84zm2.87-4.69h1.12l.07.42c0 .07.07.14.21.14h.21l-.21.7h-.77c-.28 0-.49-.07-.49-.35l-.14-.91zm-.35 1.47h3.57l-.21.77h-1.19l-.21.7h1.12l-.21.77h-1.26l-.28.42h.63l.14.84c0 .07.07.14.21.14h.21l-.21.7h-.7c-.35 0-.56-.07-.56-.35l-.14-.77-.56.84c-.14.21-.35.35-.63.35h-1.05l.21-.7h.35c.14 0 .21-.07.35-.21l.84-1.26h-1.05l.21-.77h1.19l.21-.7h-1.19l.21-.77zm-19.74-5.04c-.14.7-.42 1.19-.91 1.54-.49.35-1.12.56-1.89.56-.7 0-1.26-.21-1.54-.56-.21-.28-.35-.56-.35-.98 0-.14 0-.35.07-.56l.84-3.92h1.19l-.77 3.92v.28c0 .21.07.35.14.49.14.21.35.28.7.28s.7-.07.91-.28c.21-.21.42-.42.49-.77l.77-3.92h1.19l-.84 3.92m1.12-1.54h.84l-.07.49.14-.14c.28-.28.63-.42 1.05-.42.35 0 .63.14.77.35.14.21.21.49.14.91l-.49 2.38h-.91l.42-2.17c.07-.28.07-.49 0-.56-.07-.14-.21-.14-.35-.14-.21 0-.42.07-.56.21-.14.14-.28.35-.28.63l-.42 2.03h-.91l.63-3.57m9.8 0h.84l-.07.49.14-.14c.28-.28.63-.42 1.05-.42.35 0 .63.14.77.35s.21.49.14.91l-.49 2.38h-.91l.42-2.24c.07-.21 0-.42-.07-.49-.07-.14-.21-.14-.35-.14-.21 0-.42.07-.56.21-.14.14-.28.35-.28.63l-.42 2.03h-.91l.7-3.57m-5.81 0h.98l-.77 3.5h-.98l.77-3.5m.35-1.33h.98l-.21.84h-.98l.21-.84zm1.4 4.55c-.21-.21-.35-.56-.35-.98v-.21c0-.07 0-.21.07-.28.14-.56.35-1.05.7-1.33.35-.35.84-.49 1.33-.49.42 0 .77.14 1.05.35.21.21.35.56.35.98v.21c0 .07 0 .21-.07.28-.14.56-.35.98-.7 1.33-.35.35-.84.49-1.33.49-.35 0-.7-.14-1.05-.35m1.89-.7c.14-.21.28-.49.35-.84v-.35c0-.21-.07-.35-.14-.49a.635.635 0 0 0-.49-.21c-.28 0-.49.07-.63.28-.14.21-.28.49-.35.84v.28c0 .21.07.35.14.49.14.14.28.21.49.21.28.07.42 0 .63-.21m6.51-4.69h2.52c.49 0 .84.14 1.12.35.28.21.35.56.35.91v.28c0 .07 0 .21-.07.28-.07.49-.35.98-.7 1.26-.42.35-.84.49-1.4.49h-1.4l-.42 2.03h-1.19l1.19-5.6m.56 2.59h1.12c.28 0 .49-.07.7-.21.14-.14.28-.35.35-.63v-.28c0-.21-.07-.35-.21-.42-.14-.07-.35-.14-.7-.14h-.91l-.35 1.68zm8.68 3.71c-.35.77-.7 1.26-.91 1.47-.21.21-.63.7-1.61.7l.07-.63c.84-.28 1.26-1.4 1.54-1.96l-.28-3.78h1.19l.07 2.38.91-2.31h1.05l-2.03 4.13m-2.94-3.85l-.42.28c-.42-.35-.84-.56-1.54-.21-.98.49-1.89 4.13.91 2.94l.14.21h1.12l.7-3.29-.91.07m-.56 1.82c-.21.56-.56.84-.91.77-.28-.14-.35-.63-.21-1.19.21-.56.56-.84.91-.77.28.14.35.63.21 1.19"></path></svg>
+                                                            </li>
+                                                            <li class="payment-icon">
+                                                                <svg class="payment-icon-svg" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa">
+                                                                    <title id="pi-visa">Visa</title>
+                                                                    <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path></svg>
+                                                            </li>
+                                                        </ul>
+                                                        <hr />
+                                                        <div class="mt-3 backGroundTotale">
+                                                            <h2 class="fw-bold">Totale Acquisti</h2>
+                                                            <hr />
+                                                            <asp:Label ID="totaleModale" CssClass="fw-bold fs-3" runat="server" Text=""></asp:Label>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Chiudi</button>
+                                                    <%-- <button type="button" class="btn btn-success">Aquista</button>--%>
+                                                    <asp:Button ID="CheckOut" CssClass="btn btn-success" runat="server" Text="Acquista" OnClick="CheckOut_Click" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <%-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i>Checkout</a>--%>
+                                    <%--<a href="#" class="btn btn-white btn-sm">Cancel</a>--%>
+                                    <div class="d-flex">
+                                        <asp:Button ID="ButtonSvuotaCarrello" CssClass="btn btn-secondary btn-sm" runat="server" Text="Svuota" OnClick="ButtonSvuotaCarrello_Click" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -449,35 +235,44 @@
                         </div>
                     </div>
 
-                    <div class="ibox">
+                    <div class="ibox Interested">
                         <div class="ibox-content">
 
-                            <p class="font-bold">
-                                Other products you may be interested
-                            </p>
+                            <h4 class="font-bold">Prodotti che potrebbero interessarti
+                            </h4>
                             <hr>
                             <div>
-                                <a href="#" class="product-name">Product 1</a>
-                                <div class="small m-t-xs">
-                                    Many desktop publishing packages and web page editors now.
-                                </div>
-                                <div class="m-t text-righ">
-
+                                <a href="#" class="product-name fw-bold">HP 250 G9</a>
+                                <div class="small m-t-xs Interested">
+                                    <img class="w-100" src="../Prodotti/Telefonia/Immagini/HP 250 G9 (2).jpg" />
+                                    <p class="mb-0">Prezzo €299,99</p>
                                     <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
+                            <hr />
+                            <div>
+                                <a href="#" class="product-name fw-bold">Smart TV Majestic</a>
+                                <div class="small m-t-xs">
+                                    <img class="w-100" src="../Prodotti/Telefonia/Immagini/majestic-vidaa-1.jpg" />
+                                    <p class="mb-0">Prezzo €134,90</p>
+                                    <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+
                             <hr>
                             <div>
-                                <a href="#" class="product-name">Product 2</a>
+                                <a href="#" class="product-name fw-bold">Samsung Smart TV UHD 4K</a>
                                 <div class="small m-t-xs">
-                                    Many desktop publishing packages and web page editors now.
-                                </div>
-                                <div class="m-t text-righ">
-
+                                    <img class="w-100" src="../Prodotti/Telefonia/Immagini/samsung-smart-tv-Crystal-UHD-4K-55-CU7170-TV-2023-1-1.jpg" />
+                                    <p class="mb-0">Prezzo €1299,90</p>
                                     <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>

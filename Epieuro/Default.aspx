@@ -162,7 +162,7 @@
                                         <h5 class="card-title mb-2"><%#Item.Nome %></h5>
                                     </a>
                                     </a>
-                                    <h6 class="mb-3 price"><%# Item.Prezzo.ToString("C") %></h6>
+                                    <h6 class="mb-3 price"><%#"€"+Item.Prezzo %></h6>
                                     <div>
                                         <a href="Dettaglio.aspx?IdProdotto=<%#Item.IdProdotto %>">Dettaglio</a>
 

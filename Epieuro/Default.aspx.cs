@@ -17,11 +17,12 @@ namespace Epieuro
             if (!IsPostBack)
             {
                  Db.getProdotti(prodotti);
-                List<Categorie> cat = Db.getCategorie();
+                Db.getCategorie(Categorie);
 
-
-                Categorie.DataSource = cat;
-                Categorie.DataBind();
+                if (Session["crea"]!= null)
+                {
+                    Session.Remove("crea");
+                }
             }
      
         }
