@@ -306,5 +306,46 @@ namespace Epieuro
 
         }
 
+        public static void updatePrd(Prodotto prd)
+        {
+            Prodotto MyPrd = new Prodotto();
+            SqlCommand cmd = new SqlCommand("select * from PRODOTTI WHERE IdProdotto=@id", conn);
+            
+            cmd.Parameters.AddWithValue("id", prd.IdProdotto);
+            SqlDataReader sqlDataReader;
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                SqlCommand update = new SqlCommand("UPDATE PRODOTTI SET Nome = @Nome,DescrizioneBreve = @DescrizioneBreve," +
+                "DescrizioneEstesa = @DescrizioneEstesa, Prezzo = @Prezzo, Quantita = @Quantita, FotoPrincipale = @FotoPrincipale, Specifiche = @Specifiche, " +
+                "idCategoria = @IdCategoria,idBrand = @IdBrand WHERE IdProdotto = @IdProdotto  ", conn);
+                update.Parameters.AddWithValue("@Nome", prd.Nome);
+                update.Parameters.AddWithValue("@DescrizioneBreve", prd.DescrizioneBreve);
+                update.Parameters.AddWithValue("@DescrizioneEstesa", prd.DescrizioneEstesa);
+                update.Parameters.AddWithValue("@Prezzo", prd.Prezzo);
+                update.Parameters.AddWithValue("@Quantita", prd.quantita);
+                update.Parameters.AddWithValue("@FotoPrincipale", prd.FotoPrincipale);
+                update.Parameters.AddWithValue("@Specifiche", prd.Specifiche);
+                update.Parameters.AddWithValue("@IdCategoria", prd.IdCategoria);
+                update.Parameters.AddWithValue("@IdBrand", prd.IdBrand);
+                update.Parameters.AddWithValue("@IdProdotto", prd.IdProdotto);
+
+                update.ExecuteNonQuery();
+
+
+            }
+            conn.Close();
+
+
+
+        }
+
+
+
+
+
+
     }
 }
