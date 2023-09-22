@@ -83,7 +83,9 @@ namespace Epieuro.UserAuth
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
-
+            Prodotto prodotto = Db.getProdotto(Convert.ToInt32(Request.QueryString["id"]));
+            Db.deletePrd(prodotto);
+            Response.Redirect("TuttiGliArticoli.aspx");
         }
     }
 }
