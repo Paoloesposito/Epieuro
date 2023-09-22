@@ -27,7 +27,7 @@ namespace Epieuro
             User MyUser = new User(Nome.Text, Cognome.Text, Email.Text, Password.Text, FotoName);
 
             Db.AddUser(MyUser);
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Login.aspx");
         }
     }
 }
