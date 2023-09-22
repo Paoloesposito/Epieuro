@@ -47,7 +47,8 @@
                                                         <%--  <s class="small text-muted">€230,00</s>--%>
                                                     </td>
                                                     <td width="65">
-                                                        <input type="text" class="form-control" placeholder="1">
+                                                        <asp:Label ID="Label1" CssClass=" fs-5" runat="server" Text="Pz."></asp:Label>
+                                                        <asp:Label ID="Label2" runat="server" CssClass="fs-5" Text=""><%# Item.quantitaAcquistata %></asp:Label>
                                                     </td>
                                                     <td>
                                                         <h4>
