@@ -355,6 +355,40 @@ namespace Epieuro
         }
 
 
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO PRODOTTI (Nome, DescrizioneBreve, DescrizioneEstesa, Prezzo, Quantita, FotoPrincipale, Specifiche, IdCategoria, IdBrand, IdProdotto) " +
+                                  "VALUES (@Nome, @DescrizioneBreve, @DescrizioneEstesa, @Prezzo, @Quantita, @FotoPrincipale, @Specifiche, @IdCategoria, @IdBrand, @IdProdotto)";
+
+                cmd.Parameters.AddWithValue("@Nome", prd.Nome);
+                cmd.Parameters.AddWithValue("@DescrizioneBreve", prd.DescrizioneBreve);
+                cmd.Parameters.AddWithValue("@DescrizioneEstesa", prd.DescrizioneEstesa);
+                cmd.Parameters.AddWithValue("@Prezzo", prd.Prezzo);
+                cmd.Parameters.AddWithValue("@Quantita", prd.quantita);
+                cmd.Parameters.AddWithValue("@FotoPrincipale", prd.FotoPrincipale);
+                cmd.Parameters.AddWithValue("@Specifiche", prd.Specifiche);
+                cmd.Parameters.AddWithValue("@IdCategoria", prd.IdCategoria);
+                cmd.Parameters.AddWithValue("@IdBrand", prd.IdBrand);
+                cmd.Parameters.AddWithValue("@IdProdotto", prd.IdProdotto);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Gestisci eventuali eccezioni qui
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+
+        }
 
 
 
