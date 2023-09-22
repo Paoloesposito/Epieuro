@@ -13,7 +13,7 @@
                 <div id="ImmagineProdotto" runat="server" class="text-center">
                     <div style="height: 300px">
                         <asp:Image ID="Image1" Height="300" runat="server" />
-
+ 
                     </div>
                     <h6>Upload a different photo...</h6>
 

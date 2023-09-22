@@ -13,6 +13,11 @@ namespace Epieuro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool admin;
+            
+            
+            
+            
             if (!IsPostBack)
             {
 
@@ -24,12 +29,15 @@ namespace Epieuro
                 FormsAuthenticationTicket ticket = identity.Ticket;
                 string nome = ticket.Name;
                 User utente = Db.GetUser(nome);
-
+                    admin = Db.isAdmin();
 
                 NomeUtente.Text = $"Benvenuto {utente.Nome}" ;
+                adminPage.Visible = admin;
             }
             else
             {
+                    admin = false;
+                    adminPage.Visible = false;
                 LogoutButton1.Text = "Login";
             }
             }
