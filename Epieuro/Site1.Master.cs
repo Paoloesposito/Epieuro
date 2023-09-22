@@ -28,7 +28,17 @@ namespace Epieuro
                 FormsAuthenticationTicket ticket = identity.Ticket;
                 string nome = ticket.Name;
                 User utente = Db.GetUser(nome);
+                    if (utente.FotoProfilo.Length<2) 
+                    { 
                     ImgProfilo.ImageUrl = $"Content/UserImg/imgUserProfiloNav.png";
+
+                    }
+                    else 
+                    {
+                        ImgProfilo.ImageUrl = $"Content/UserImg/{utente.FotoProfilo}";
+
+                    }
+
                     admin = Db.isAdmin();
 
 
