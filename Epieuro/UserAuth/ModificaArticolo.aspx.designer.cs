@@ -87,13 +87,13 @@ namespace Epieuro.UserAuth
         protected global::System.Web.UI.WebControls.TextBox Quantita;
 
         /// <summary>
-        /// Controllo Categorie.
+        /// Controllo Cate.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Categorie;
+        protected global::System.Web.UI.WebControls.DropDownList Cate;
 
         /// <summary>
         /// Controllo BrandList.
@@ -103,5 +103,14 @@ namespace Epieuro.UserAuth
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList BrandList;
+
+        /// <summary>
+        /// Controllo SaveButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveButton;
     }
 }
