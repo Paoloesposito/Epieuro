@@ -7,83 +7,83 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Epieuro
+namespace Epieuro.UserAuth
 {
 
 
-    public partial class Carrello
+    public partial class AddArticolo
     {
 
         /// <summary>
-        /// Controllo prodottiCarrello.
+        /// Controllo Nome.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater prodottiCarrello;
+        protected global::System.Web.UI.WebControls.TextBox Nome;
 
         /// <summary>
-        /// Controllo Acquistato.
+        /// Controllo RequiredFieldValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Acquistato;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// Controllo carrelloBoxVuoto.
+        /// Controllo prezzo.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl carrelloBoxVuoto;
+        protected global::System.Web.UI.WebControls.TextBox prezzo;
 
         /// <summary>
-        /// Controllo imgCarrello.
+        /// Controllo DescBrev.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgCarrello;
+        protected global::System.Web.UI.WebControls.TextBox DescBrev;
 
         /// <summary>
-        /// Controllo totale.
+        /// Controllo DescrizioneEstesa.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totale;
+        protected global::System.Web.UI.WebControls.TextBox DescrizioneEstesa;
 
         /// <summary>
-        /// Controllo totaleModale.
+        /// Controllo Specifiche.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label totaleModale;
+        protected global::System.Web.UI.WebControls.TextBox Specifiche;
 
         /// <summary>
-        /// Controllo CheckOut.
+        /// Controllo Foto.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckOut;
+        protected global::System.Web.UI.WebControls.FileUpload Foto;
 
         /// <summary>
-        /// Controllo ButtonSvuotaCarrello.
+        /// Controllo aggiungi.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSvuotaCarrello;
+        protected global::System.Web.UI.WebControls.Button aggiungi;
     }
 }

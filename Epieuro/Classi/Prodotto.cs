@@ -53,8 +53,20 @@ namespace Epieuro.Classi
             IdCategoria = idCategoria;
         }
 
+        public Prodotto(string nome, string descrizioneBreve, string descrizioneEstesa, int quantita, string fotoPrincipale, string specifiche, double prezzo, int idBrand, int idCategoria)
+        {
+           
+            Nome = nome;
+            DescrizioneBreve = descrizioneBreve;
+            DescrizioneEstesa = descrizioneEstesa;
+            this.quantita = quantita;
+            FotoPrincipale = fotoPrincipale;
+            Specifiche = specifiche;
+            Prezzo = prezzo;
+            IdBrand = idBrand;
+            IdCategoria = idCategoria;
+        }
 
-       
 
 
     }

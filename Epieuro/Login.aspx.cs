@@ -26,36 +26,37 @@ namespace Epieuro
             utente = Db.GetUser(EmailLogin.Text);
             if (utente.Email == EmailLogin.Text && utente.Password == PasswordLogin.Text)
             {
-                if(ricordami.Checked)
+
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+                    1,
+                    utente.Email,
+                    DateTime.Now,
+                    DateTime.Now.AddDays(1),
+                    ricordami.Checked,
+                    utente.nomeRuolo
+                    );
+
+                string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+
+                HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+
+                Response.Cookies.Add(authCookie);
+                if (utente.nomeRuolo == "admin")
                 {
-                FormsAuthentication.SetAuthCookie(utente.Nome, true);
-                HttpCookie login = new HttpCookie("userLoged");
-                    login.Values["username"] = utente.Nome;
-                    login.Values["cognome"] = utente.Cognome;
-                    login.Expires = DateTime.Now.AddDays(10);
-                    Response.Cookies.Add(login);
-                    
-                    isLoggedIn = true;
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                    // inserire codice redirect su la dashboard
+                    Response.Redirect("UserAuth/TuttiGliArticoli.aspx");
                 }
-                else 
+                else
                 {
-                    FormsAuthentication.SetAuthCookie(EmailLogin.Text, false);
-                    HttpCookie login = new HttpCookie("userLoged");
-                    login.Values["username"] = utente.Nome;
-                    login.Values["cognome"] = utente.Cognome;
-                    Response.Cookies.Add(login);
-                    isLoggedIn = true;
-                    Response.Redirect(FormsAuthentication.DefaultUrl);
+                    Response.Redirect("Default.aspx");
 
                 }
-
-
             }
             else
             {
-                Response.Redirect(FormsAuthentication.LoginUrl);
+                Response.Redirect(FormsAuthentication.LoginUrl); ;
             }
+
         }
     }
 }
