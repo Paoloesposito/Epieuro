@@ -64,7 +64,7 @@
                                 <div class="col d-flex justify-content-center">
                                     <!-- Checkbox -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="ricordami" runat="server" />
+                                        <input class="form-check-input" type="checkbox" id="ricordami" runat="server" />
                                         <label class="form-check-label" for="ricordami">Remember me </label>
                                     </div>
                                 </div>

@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Carrello-Stile.css" />
+    <Content Include="Content\Css\details.css" />
     <Content Include="Content\UserImg\800px-Franky.png" />
     <Content Include="Content\UserImg\imgUserProfiloNav.png" />
     <Content Include="ContenutiCarosello\About.png" />
@@ -212,6 +213,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\DB\Team1.bak" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

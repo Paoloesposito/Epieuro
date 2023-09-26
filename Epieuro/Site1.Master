@@ -93,10 +93,7 @@
                         <asp:Image ID="ImgProfilo" CssClass="profileImage" runat="server" />
                         <asp:Label ID="NomeUtente" CssClass="text-white me-4" runat="server" Text=" "></asp:Label>
                         <asp:LinkButton ID="LogoutButton1" CssClass="nav-link text-white fw-bold" runat="server" OnClick="LogoutButton1_Click" CausesValidation="false">logout</asp:LinkButton>
-                        <a class="nav-link ms-4" href="UserAuth/Carrello.aspx">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                        </a>
+                        
                     </div>
                     <!-- Right elements -->
 
